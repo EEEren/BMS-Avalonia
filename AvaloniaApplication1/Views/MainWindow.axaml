@@ -1,0 +1,333 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="using:Avalonia.Xaml.Interactivity"
+        xmlns:localBehaviors="using:AvaloniaApplication1.Behaviors"
+        mc:Ignorable="d" Width="1340" Height="720"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="恒曦智能BMS">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+    
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="240"/>
+        <RowDefinition Height="240"/>
+        <RowDefinition Height="240"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+		<ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+
+    <!-- 串口参数 -->
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="串 口 号" VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="1" ItemsSource="{Binding SerialList}" 
+                  SelectedItem="{Binding PortName, Mode=TwoWay}" Width="100"/>
+        <TextBlock Text="波 特 率" Grid.Row="1" VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding BaudRateList}" 
+                  SelectedItem="{Binding BaudRate}" Width="100"/>
+        <TextBlock Text="从站地址" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding SlaveAddr }"  Grid.Column="1" Grid.Row="2" Margin="0,3"
+                 IsEnabled="{Binding !IsSerialEnabled}"/>
+        <TextBlock Text="延时间隔" Grid.Row="3" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding DelayInterval}" Margin="0,3"
+                 IsEnabled="{Binding !IsSerialEnabled}"/>
+
+        <!--<Button Command="{Binding SwitchSerialPortCommand}" 
+                Grid.Row="5" Grid.Column="0" Content="{Binding BtnSwitchSerialPortText}" Margin="5,-5,5,0"/>-->
+        <Button Command="{Binding GetSerialPortCommand}" 
+                Grid.Row="5" Grid.Column="0" Content="刷新串口" Margin="5,-5,5,0"/>
+
+    </Grid>
+
+    <!-- 数据监控 -->
+    <Grid Grid.Column="1">
+    </Grid>
+
+    <!-- 日志操作 -->
+    <Grid Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Width="300" VerticalAlignment="Bottom" Grid.RowSpan="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox Text="操作日志" FontSize="24" IsReadOnly="True"/>
+        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" CornerRadius="4" Margin="0,5,0,15" Height="261" VerticalAlignment="Top">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
+                <i:Interaction.Behaviors>
+                    <localBehaviors:AutoScrollToEndBehavior/>
+                </i:Interaction.Behaviors>
+                <ItemsControl ItemsSource="{Binding LogEntries}" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="Auto, *" Margin="0, 2">
+                                <TextBlock Grid.Column="0" Text="{Binding Date}" Margin="0,0,8,0"/>
+                                <TextBlock Grid.Column="1" Text="{Binding Message}" TextWrapping="Wrap"/>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </Border>
+    </Grid>
+
+    <!-- 电池组实时信息 -->
+    <Grid Grid.Row="1" Grid.Column="0" Width="200" Margin="10" Grid.RowSpan="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height= "8*"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBox Text="电池组实时信息" FontSize="24" IsReadOnly="True"/>
+        <UniformGrid Grid.Row="1" Columns="1">
+            <TextBlock>
+                <Run Text="电压: "/>
+                <Run Text="{Binding AccumulatedTotalVoltage}"/>
+                <Run Text="V"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="电流: "/>
+                <Run Text="{Binding BatteryCurrent}"/>
+                <Run Text="A"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="温度: "/>
+                <Run Text="{Binding MaximumTemperature}"/>
+                <Run Text="℃"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="容量: "/>
+                <Run Text="{Binding BMS_SOC}"/>
+                <Run Text="%"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="设备ID: "/>
+                <Run Text="{Binding BatteryIDSerialNumber}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="硬件版本号: "/>
+                <Run Text="{Binding HardwareVersion}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="软件版本号: "/>
+                <Run Text="{Binding SoftwareVersion}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="飞控协议: "/>
+                <Run Text="{Binding FlightControlProtocol}"/>
+            </TextBlock>
+
+        </UniformGrid>
+        <TextBox Grid.Row="2" Text="电池组状态" FontSize="24" IsReadOnly="True"/>
+        <UniformGrid Grid.Row="3" Columns="1">
+            <TextBlock>
+                <Run Text="循环次数: "/>
+                <Run Text="{Binding LoopCount}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="过温次数: "/>
+                <Run Text="{Binding OverTemperatureCount}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="过放次数: "/>
+                <Run Text="{Binding OverReleaseCount}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="过流次数: "/>
+                <Run Text="{Binding OvercurrentsCount}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="过冲次数: "/>
+                <Run Text="{Binding OverchargesCount}" />
+            </TextBlock>
+        </UniformGrid>
+
+    </Grid>
+
+    <!-- 14s单体电压 -->
+    <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,10,10" Width="360" Grid.RowSpan="2">
+       <Grid>
+           <Grid.RowDefinitions>
+               <RowDefinition Height="45"/>
+               <RowDefinition />
+           </Grid.RowDefinitions>
+           <TextBox Text="14s单体电压" Height="45" FontSize="24" Margin="0,0,0,10" IsReadOnly="True"/>
+
+        <UniformGrid Columns="2" Grid.Row="1">
+            <TextBlock>
+                <Run Text="00号单体电压"/>
+                <Run Text="{Binding MonomerVoltage0}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="01号单体电压"/>
+                <Run Text="{Binding MonomerVoltage1}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="02号单体电压"/>
+                <Run Text="{Binding MonomerVoltage2}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="03号单体电压"/>
+                <Run Text="{Binding MonomerVoltage3}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="04号单体电压"/>
+                <Run Text="{Binding MonomerVoltage4}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="05号单体电压"/>
+                <Run Text="{Binding MonomerVoltage5}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="06号单体电压"/>
+                <Run Text="{Binding MonomerVoltage6}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="07号单体电压"/>
+                <Run Text="{Binding MonomerVoltage7}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="08号单体电压"/>
+                <Run Text="{Binding MonomerVoltage8}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="09号单体电压"/>
+                <Run Text="{Binding MonomerVoltage9}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="10号单体电压"/>
+                <Run Text="{Binding MonomerVoltage10}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="11号单体电压"/>
+                <Run Text="{Binding MonomerVoltage11}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="12号单体电压"/>
+                <Run Text="{Binding MonomerVoltage12}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+            <TextBlock >
+                <Run Text="13号单体电压"/>
+                <Run Text="{Binding MonomerVoltage13}"/>
+                <Run Text="mV"/>
+            </TextBlock>
+        </UniformGrid>
+        
+       </Grid>
+        
+
+    </Grid>
+    
+
+    <!-- 电池组操作 -->
+    <Grid Grid.Row="0" Grid.Column="1" Margin="10" Width="360" HorizontalAlignment="Left" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox Text="电池组操作" FontSize="24" HorizontalAlignment="Center" IsReadOnly="True"/>
+        <UniformGrid Grid.Row="1" Columns="3">
+            <Button Content="  连 接 电 池" Width="110" IsEnabled="{Binding !IsSerialEnabled}" Command="{Binding SwitchSerialPortCommand}"/>
+            <Button Content="  断 开 电 池" Width="110" IsEnabled="{Binding IsSerialEnabled}" Command="{Binding SwitchSerialPortCommand}"/>
+            <Button Content="  写 入 日 期" Command="{Binding WriteDateCommand}" />
+            <Button Content="获取故障信息" Width="110" IsEnabled="{Binding IsSerialEnabled}" Command="{Binding GetFaultInfoCommand}"/>
+			<TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+			<TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+
+			<!--<Button Content="  删 除 记 录" Width="110" IsEnabled="{Binding IsSerialEnabled}"/>-->
+            <!--<Button Content="      校  对" Width="110" IsEnabled="{Binding IsSerialEnabled}"/>-->
+            <Button Content=" 修改飞控协议" Width="110"  Command="{Binding ModifyFightControlCommand}"/>
+            <TextBox Width="110" Height="27" Margin="-9,0,0,0" Text="{Binding FlightControlProtocolType}"/> 
+            <TextBlock Text="0:新微克;1:博鹰" TextWrapping="Wrap" Margin="5,12,0,0"/>
+
+			<Button Content=" 设  置  电  量" Width="110"  Command="{Binding SetBatteryCapacityCommand}"/>
+			<TextBox Width="110" Height="27" Margin="-9,0,0,0" Text="{Binding BatteryCapacity}"/>
+			<TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+        </UniformGrid>
+    </Grid>
+    
+    <!-- 时间 -->
+    <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+        <StackPanel Orientation="Vertical">
+            <Calendar Margin="0,10" 
+                      SelectedDate="{Binding SeletedDate, Mode=TwoWay}"
+                      SelectionMode="SingleDate"/> 
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="时间:  " FontSize="20" VerticalAlignment="Center"/>
+                <TimePicker SelectedTime="{Binding TimeSpan}" UseSeconds="False"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+		
+	<!-- 历史故障信息 -->
+    <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Width="400" VerticalAlignment="Top" Grid.RowSpan="3" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox Text="历史故障信息" FontSize="24" IsReadOnly="True"/>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" Margin="10" 
+                  BorderThickness="1" BorderBrush="Gray" Height="630" Width="400">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="时间"  Binding="{Binding DateTime}" Width="100"/>
+                <DataGridTextColumn Header="故障类型" Binding="{Binding FaultType}"/>
+                <DataGridTextColumn Header="电流" Binding="{Binding CurrentState}" />
+                <DataGridTextColumn Header="电压"  Binding="{Binding VoltageState}"/>
+                <DataGridTextColumn Header="温度" Binding="{Binding TemperatureState}" />
+            </DataGrid.Columns>
+            
+        </DataGrid>
+		
+        
+    </Grid>
+		
+</Grid>
+
+
+
+</Window>

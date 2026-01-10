@@ -1,0 +1,1767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADc
+        CgAAAk1TRnQBSQFMAgEBAwEAAWQBAQF0AQEBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wQAAf8B9AHzBPAB8gH0
+        Av8CABD/BAAC/wHzAvAB8wH0Af8XAAH/AbwBBwG8AvACvAEHAfQB/wIAAfMOdAEaAwAB/wHxAW4BAQMf
+        AUUBBwH/FAAB/wH0AbwBBwG0BK0BtAG1AQcB8wH/AQAB9AFTDTIBGgIAAf8BkwFFBx8BbwH0EwAB/wG8
+        AQcBrQLOAgkB1QHOAa0BtQG8AfQCAAGaBTICWQFTBDIBUwH/AQAB/wEHCR8BIAFvAf8SAAHyAbwBzwGt
+        Ac4BrQG8AfQBtAHOAq0BtQG8Af8BAAH0AVMEOAFSAUsBWQM4AVMBGgH/AQAB8wHpAh8BbwHpAh8BIAFv
+        AUYCIAEHAf8QAAH/AbwBtQStAQkB8wHPA60BtAEHAfQBAAH/ARoBUwM4A1kCOAFZAXoB/wIAAZMCHwHp
+        ARoBBwHpASABbwH/AW8CIAFGAf8QAAH/AQcBzwStAQcB8gHPBK0BBwHyAgAB/wF6A1kBUQFKBFkBGwIA
+        Af8BbwMgAUYBGgGTAW8BGgFvBCAB8xAAAf8BBwStAacBtQHwAc8ErQEHAfIDAAEaA1kBUQFKA1kBegH/
+        AgAB/wFGBSABGgH/AW8FIAEaEAAB/wEHAc8DrQGnAbUB7wGtAacDrQEHAfIDAAH/AXoCWQFSAUoCWQF6
+        AfQDAAH/AW8CRgIgAW8CGwGUBUYB8hAAAf8BvAG0Ac8ErQOnAq0BzwEHAfMEAAH0AlkBUgFKAlkBGgUA
+        AZMDRgEWAf8BFgEXARsBvQEXA0cB9BAAAf8B8QHvAbQBzwGtAc8B3QH0AbQCrQHPAbUBvAH0BAAB/wGa
+        AVkBUgFKAVkBegH/BQABGgPjAb0BlALjARYB8wGUAuMBFgH/EQAB9AG8AbUB1QLPAfMB/wG1A88BBwHy
+        Af8FAAH0AXoCUgF6ARoGAAH/DBYB8xIAAf8B8gG8AbUBtAHVAtYB1QK0AbwB8QH/BgAB/wEaAXoBWQGa
+        Af8GAAH/AfMKlAEaAf8TAAH/AfIB8AG8AbUDtAEHAbwB8AH/CAAB/wKaARsJAAH0AZQGvQGUARoB/xUA
+        Af8B9AHxBPAB8QHzAv8JAAEbAZoB/wkAAv8BGwS9ARoB9AH/GAAG/wwAAv8OAAP/FgABQgFNAT4HAAE+
+        AwABKAMAAUADAAEQAwABAQEAAQEFAAGAFwAD/wEAAeABAwIAAfABDwIAAeABAwIAAeABBwIAAYABAQIA
+        AcABAwIAAYABAQGAAQABgAEBAgABgAEAAYABAAGABQABgAEBAYAFAAHAAQMGAAHgAQMGAAHgAQcGAAHw
+        AQ8BgAUAAfABDwGAAwABgAEAAfgBHwGAAQECAAGAAQEB+AEfAYABAQIAAcABAwH8AT8B4AEDAgAB4AED
+        Af4BPwHgAQcCAAH4AR8B/gF/Af4BPxgACw==
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAESAAAAEAIAAoCQAAFgAAACgAAAARAAAAQAAAAAEAIAAAAAAAgAgAABAnAAAQJwAAAAAAAAAA
+        AACIg3wAiIN8AIiDfACIg3wAiIN8AIiDfACIg3wAiIN9AHZxaQBkX1YAZF9XAGRfVwBkX1cAZF9XAGRf
+        VwBkX1YAZWBYAIiDfBWIg3x3iIN8j4iDfI2Ig3yNiIN8jYiDfI2Ig32NdnFpjWRfVo1kX1eNZF9XjWRf
+        V41kX1eNZF9Xj2RfV3hmYVkWiIN8RoiDfPaIg3z/iIN8/4iDfP+Ig3z/iIN8/4iDff92cWn/ZF9W/2Rf
+        V/9kX1f/ZF9X/2RfV/9kX1f/ZF9X92VgWEiIg3xKiIN89IiDfP+Ig3z/iIN8/4iDfP+Ig3z/iIN9/3Zx
+        af9kX1b/ZF9X/2RfV/9kX1f/ZF9X/2RfV/9kX1f1ZWBYTIiBfEqIgXz0iIF8/4iBfP+IgXz/iIF8/4iB
+        fP+Jgnz/dm9p/2NdVv9kXVf/ZF1X/2RdV/9kXVf/ZF1X/2RdV/VlX1hMhqR9SYakffSGpH3/hqR9/4ak
+        ff+GpH3/hqR9/4akff96k2v/bYJY/22DWf9tg1n/bYNZ/22DWf9tg1n/boNZ9W6EWkyB539Kged/9IHn
+        f/+B53//ged//4Hnf/+B53//ged//4DXbf+AyFv/gMhb/4DIW/+AyFv/gMhb/4DIW/+AyFv1gMlcTIHo
+        f0qB6H/0geh//4Hof/+B6H//geh//4Hof/+B6H//gdlu/4DJWv+AyVv/gMlb/4DJW/+AyVv/gMlb/4DJ
+        W/WAylxMgeh/SoHof/SB6H//geh//4Hof/+B6H//gOh+/5Xpk/+/3bT/kst0/3/JWv+AyVv/gMlb/4DJ
+        W/+AyVv/gMlb9YDKXEyB6H9Kgeh/9IHof/+B6H//geh//4Hof/9/6H3/n+mc/+Hg3f/B0LP/hspj/3/J
+        Wv+AyVv/gMlb/4DJW/+AyVv1gMpcTIHof0qB6H/0geh//4Hof/+B6H//geh//4Hof/+E6IL/uN6z/9nT
+        0/+qzpX/gMlb/4DJW/+AyVv/gMlb/4DJW/WAylxMgeh/SoHof/SB6H//geh//4Hof/+B6H//geh//4Do
+        fv+M2nz/ydG+/9HSyv+VzHj/f8lZ/4DJW/+AyVv/gMlb9YDKXEyB6H9Kgeh/9IHof/+B6H//gOh+/4Ho
+        f/+B6H//geh//3/Ya/+dzIL/1dPP/8HRtP+GymT/gMla/4DJW/+AyVv1gMpcTIHof0qB6H/0geh//4Ho
+        f/+n6aT/xerB/8Xqwf/F68L/vt2z/7jPqP/S0sr/2dPU/6rOlf+AyVv/gMlb/4DJW/WAylxMgeh/SoHo
+        f/SB6H//guiA/8nrxf/17PD/8Ozr/+rs5v/f39n/09LM/9LSy//T08z/tc+j/4HJXf+AyVv/gMlb9YDK
+        XEyB6H9Kgeh/9IHof/+A6H7/mumX/+fs4v/m7OH/o+qg/5HagP+Qy3D/kMtx/5DLcf+HymT/gMlb/4DJ
+        W/+AyVv1gMpcTIHof0qB6H/0geh//4Hof/+B6H//teqx//Hs7P/C67//gthu/3/IWf9/yVr/f8la/4DJ
+        Wv+AyVv/gMlb/4DJW/WAylxMgeh/SoHof/SB6H//geh//4Dofv+I6Ib/0evN/+7s6v+m2pP/f8lZ/4DJ
+        W/+AyVv/gMlb/4DJW/+AyVv/gMlb9YDKXEyB6H9Kgeh/9IHof/+B6H//geh//4Dofv+Z6Zf/5+zj/9fe
+        zf+Mymz/f8la/4DJW/+AyVv/gMlb/4DJW/+AyVv1gMpcTIHof0qB6H/0geh//4Hof/+B6H//geh//4Ho
+        f/+z6rD/3d/X/5rMfv9/yVn/gMlb/4DJW/+AyVv/gMlb/4DJW/WAylxMgeh/SoHof/SB6H//geh//4Ho
+        f/+B6H//geh//4Xpg/+U2oP/hMlg/4DJW/+AyVv/gMlb/4DJW/+AyVv/gMlb9YDKXEyB6n9Kgep/9IHq
+        f/+B6n//gep//4Hqf/+B6n//gep//3/abP+Aylr/gMtb/4DLW/+Ay1v/gMtb/4DLW/+Ay1v1gMxcTIPN
+        fkmDzX70g81+/4PNfv+DzX7/g81+/4PNfv+DzX//fr1s/3itWv95rVr/ea1a/3mtWv95rVr/ea1a/3mt
+        WvV5rltMiIZ8SYiGfPSIhnz/iIZ8/4iGfP+Ihnz/iIZ8/4iGff92dGr/ZGJX/2ViV/9lYlf/ZWJX/2Vi
+        V/9lYlf/ZWJX9WZkWUyIg3xKiIN89IiDfP+Ig3z/iIN8/4iDfP+Ig3z/iYN9/3Zxaf9jXlb/ZF9X/2Rf
+        V/9kX1f/ZF9X/2RfV/9kX1f1ZWBYTIiDfEqIg3z2iIN8/4iDfP+Ig3z/iIN8/4iDfP+JhH3/dnFq/2Rf
+        V/9kX1f/ZF9X/2RfV/9kX1f/ZF9X/2RfV/dlYFhNiIN8MYiDfM+Ig3zmiIN85oWAefiEf3j/hH94/4WA
+        ef9ybWb/YFtT/2BbU/9gW1P/YVxU+GRfV+ZkX1fnZF9X0GVgWDOIg3wCiIN8G4iDfCSCfXYra2ZexWlk
+        XP9pZFz/amVd/1dRSv9EPjf/RD83/0Q+N/9GQDnHX1pSLGVgWCVlYFgbZ2JaAoiDfACIg3wAgn12AFVQ
+        SAZkX1e8ZF9X/2RfV/9kX1f/UUxE/z44Mf8/OTL/Pzky/z85Mr00LicGXllRAGVgWABnYloAAAAAAAAA
+        AABkX1cAZF9XB2RfV7pkX1f/ZF9X/2VgWP9RTET/Pjgx/z85Mv8/OTL/Pzkyu0I8NQdCPDUAAAAAAAAA
+        AAAAAAAAAAAAAGRfVwBlXlcAZF9XTWRfV45kX1eNZWBYjVFMRI0+ODGNPzkyjT85Mo5AOjNPW1RNAEM9
+        NgAAAAAAAAAAAAAAAAAAAAAAZF9XAGRfVwBkX1cAZF9XAGRfVwBlYFgAUUxEAD44MQA/OTIAPzkyAD85
+        MgBDPTYAQz02AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADAAYAAwAGAAMABgAA=
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>BMS Battery Manage System【Thinger】</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;label100.Name" xml:space="preserve">
+    <value>label100</value>
+  </data>
+  <data name="&gt;&gt;label100.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label100.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label100.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label101.Name" xml:space="preserve">
+    <value>label101</value>
+  </data>
+  <data name="&gt;&gt;label101.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label101.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label101.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label102.Name" xml:space="preserve">
+    <value>label102</value>
+  </data>
+  <data name="&gt;&gt;label102.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label102.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label102.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label106.Name" xml:space="preserve">
+    <value>label106</value>
+  </data>
+  <data name="&gt;&gt;label106.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label106.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label106.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label107.Name" xml:space="preserve">
+    <value>label107</value>
+  </data>
+  <data name="&gt;&gt;label107.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label107.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label107.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;label108.Name" xml:space="preserve">
+    <value>label108</value>
+  </data>
+  <data name="&gt;&gt;label108.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label108.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label108.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label109.Name" xml:space="preserve">
+    <value>label109</value>
+  </data>
+  <data name="&gt;&gt;label109.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label109.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label109.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label110.Name" xml:space="preserve">
+    <value>label110</value>
+  </data>
+  <data name="&gt;&gt;label110.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label110.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label110.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;label111.Name" xml:space="preserve">
+    <value>label111</value>
+  </data>
+  <data name="&gt;&gt;label111.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label111.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label111.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label112.Name" xml:space="preserve">
+    <value>label112</value>
+  </data>
+  <data name="&gt;&gt;label112.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label112.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label112.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label25.Name" xml:space="preserve">
+    <value>label25</value>
+  </data>
+  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label34.Name" xml:space="preserve">
+    <value>label34</value>
+  </data>
+  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label35.Name" xml:space="preserve">
+    <value>label35</value>
+  </data>
+  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label36.Name" xml:space="preserve">
+    <value>label36</value>
+  </data>
+  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label37.Name" xml:space="preserve">
+    <value>label37</value>
+  </data>
+  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label385.Name" xml:space="preserve">
+    <value>label385</value>
+  </data>
+  <data name="&gt;&gt;label385.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label385.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label385.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label386.Name" xml:space="preserve">
+    <value>label386</value>
+  </data>
+  <data name="&gt;&gt;label386.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label386.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label386.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label387.Name" xml:space="preserve">
+    <value>label387</value>
+  </data>
+  <data name="&gt;&gt;label387.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label387.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label387.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;label41.Name" xml:space="preserve">
+    <value>label41</value>
+  </data>
+  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label42.Name" xml:space="preserve">
+    <value>label42</value>
+  </data>
+  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label43.Name" xml:space="preserve">
+    <value>label43</value>
+  </data>
+  <data name="&gt;&gt;label43.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label45.Name" xml:space="preserve">
+    <value>label45</value>
+  </data>
+  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label45.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;label95.Name" xml:space="preserve">
+    <value>label95</value>
+  </data>
+  <data name="&gt;&gt;label95.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label95.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label95.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label97.Name" xml:space="preserve">
+    <value>label97</value>
+  </data>
+  <data name="&gt;&gt;label97.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label97.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label97.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label98.Name" xml:space="preserve">
+    <value>label98</value>
+  </data>
+  <data name="&gt;&gt;label98.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label98.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label98.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lbl_AverageVol.Name" xml:space="preserve">
+    <value>lbl_AverageVol</value>
+  </data>
+  <data name="&gt;&gt;lbl_AverageVol.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;lbl_AverageVol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_AverageVol.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lbl_DiffVol.Name" xml:space="preserve">
+    <value>lbl_DiffVol</value>
+  </data>
+  <data name="&gt;&gt;lbl_DiffVol.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;lbl_DiffVol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_DiffVol.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lbl_Info.Name" xml:space="preserve">
+    <value>lbl_Info</value>
+  </data>
+  <data name="&gt;&gt;lbl_Info.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Info.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScrollAlarm.Name" xml:space="preserve">
+    <value>lbl_ScrollAlarm</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScrollAlarm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScrollAlarm.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.ScrollingText, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScrollAlarm.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_SysState.Name" xml:space="preserve">
+    <value>lbl_SysState</value>
+  </data>
+  <data name="&gt;&gt;lbl_SysState.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;lbl_SysState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_SysState.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_Temp.Name" xml:space="preserve">
+    <value>lbl_Temp</value>
+  </data>
+  <data name="&gt;&gt;lbl_Temp.Parent" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;lbl_Temp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Temp.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalCurrent.Name" xml:space="preserve">
+    <value>lbl_TotalCurrent</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalCurrent.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalCurrent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalCurrent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalVoltage.Name" xml:space="preserve">
+    <value>lbl_TotalVoltage</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalVoltage.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalVoltage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalVoltage.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lbl_Version.Name" xml:space="preserve">
+    <value>lbl_Version</value>
+  </data>
+  <data name="&gt;&gt;lbl_Version.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;led1.Name" xml:space="preserve">
+    <value>led1</value>
+  </data>
+  <data name="&gt;&gt;led1.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led1.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;led10.Name" xml:space="preserve">
+    <value>led10</value>
+  </data>
+  <data name="&gt;&gt;led10.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led10.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;led11.Name" xml:space="preserve">
+    <value>led11</value>
+  </data>
+  <data name="&gt;&gt;led11.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led11.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led11.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;led12.Name" xml:space="preserve">
+    <value>led12</value>
+  </data>
+  <data name="&gt;&gt;led12.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led12.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;led13.Name" xml:space="preserve">
+    <value>led13</value>
+  </data>
+  <data name="&gt;&gt;led13.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led13.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led13.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;led14.Name" xml:space="preserve">
+    <value>led14</value>
+  </data>
+  <data name="&gt;&gt;led14.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led14.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led14.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;led2.Name" xml:space="preserve">
+    <value>led2</value>
+  </data>
+  <data name="&gt;&gt;led2.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led2.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;led3.Name" xml:space="preserve">
+    <value>led3</value>
+  </data>
+  <data name="&gt;&gt;led3.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led3.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;led4.Name" xml:space="preserve">
+    <value>led4</value>
+  </data>
+  <data name="&gt;&gt;led4.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led4.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;led5.Name" xml:space="preserve">
+    <value>led5</value>
+  </data>
+  <data name="&gt;&gt;led5.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led5.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led5.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;led7.Name" xml:space="preserve">
+    <value>led7</value>
+  </data>
+  <data name="&gt;&gt;led7.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led7.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led7.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;led8.Name" xml:space="preserve">
+    <value>led8</value>
+  </data>
+  <data name="&gt;&gt;led8.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led8.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led8.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;led9.Name" xml:space="preserve">
+    <value>led9</value>
+  </data>
+  <data name="&gt;&gt;led9.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;led9.Type" xml:space="preserve">
+    <value>SeeSharpTools.JY.GUI.LED, SeeSharpTools.JY.GUI, Version=1.4.4.533, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;led9.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lstInfo.Name" xml:space="preserve">
+    <value>lstInfo</value>
+  </data>
+  <data name="&gt;&gt;lstInfo.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;lstInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lstInfo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Name" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnl_Voltage.Name" xml:space="preserve">
+    <value>pnl_Voltage</value>
+  </data>
+  <data name="&gt;&gt;pnl_Voltage.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;pnl_Voltage.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnl_Voltage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem10.Name" xml:space="preserve">
+    <value>toolStripMenuItem10</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem13.Name" xml:space="preserve">
+    <value>toolStripMenuItem13</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
+    <value>toolStripMenuItem4</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem5.Name" xml:space="preserve">
+    <value>toolStripMenuItem5</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel10.Name" xml:space="preserve">
+    <value>toolStripStatusLabel10</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel11.Name" xml:space="preserve">
+    <value>toolStripStatusLabel11</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel2.Name" xml:space="preserve">
+    <value>toolStripStatusLabel2</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel8.Name" xml:space="preserve">
+    <value>toolStripStatusLabel8</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_CalibrationParam.Name" xml:space="preserve">
+    <value>tsb_CalibrationParam</value>
+  </data>
+  <data name="&gt;&gt;tsb_CalibrationParam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_Exit.Name" xml:space="preserve">
+    <value>tsb_Exit</value>
+  </data>
+  <data name="&gt;&gt;tsb_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_HardwareConfig.Name" xml:space="preserve">
+    <value>tsb_HardwareConfig</value>
+  </data>
+  <data name="&gt;&gt;tsb_HardwareConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_HardwareUpdate.Name" xml:space="preserve">
+    <value>tsb_HardwareUpdate</value>
+  </data>
+  <data name="&gt;&gt;tsb_HardwareUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_ProtectParam.Name" xml:space="preserve">
+    <value>tsb_ProtectParam</value>
+  </data>
+  <data name="&gt;&gt;tsb_ProtectParam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_Restart.Name" xml:space="preserve">
+    <value>tsb_Restart</value>
+  </data>
+  <data name="&gt;&gt;tsb_Restart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb_SystemLog.Name" xml:space="preserve">
+    <value>tsb_SystemLog</value>
+  </data>
+  <data name="&gt;&gt;tsb_SystemLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsl_CommState.Name" xml:space="preserve">
+    <value>tsl_CommState</value>
+  </data>
+  <data name="&gt;&gt;tsl_CommState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsl_time.Name" xml:space="preserve">
+    <value>tsl_time</value>
+  </data>
+  <data name="&gt;&gt;tsl_time.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_About.Name" xml:space="preserve">
+    <value>tsm_About</value>
+  </data>
+  <data name="&gt;&gt;tsm_About.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_Chinese.Name" xml:space="preserve">
+    <value>tsm_Chinese</value>
+  </data>
+  <data name="&gt;&gt;tsm_Chinese.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_CommSet.Name" xml:space="preserve">
+    <value>tsm_CommSet</value>
+  </data>
+  <data name="&gt;&gt;tsm_CommSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_English.Name" xml:space="preserve">
+    <value>tsm_English</value>
+  </data>
+  <data name="&gt;&gt;tsm_English.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_Exit.Name" xml:space="preserve">
+    <value>tsm_Exit</value>
+  </data>
+  <data name="&gt;&gt;tsm_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_Help.Name" xml:space="preserve">
+    <value>tsm_Help</value>
+  </data>
+  <data name="&gt;&gt;tsm_Help.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_RecordStart.Name" xml:space="preserve">
+    <value>tsm_RecordStart</value>
+  </data>
+  <data name="&gt;&gt;tsm_RecordStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_RecordStop.Name" xml:space="preserve">
+    <value>tsm_RecordStop</value>
+  </data>
+  <data name="&gt;&gt;tsm_RecordStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_RegSet.Name" xml:space="preserve">
+    <value>tsm_RegSet</value>
+  </data>
+  <data name="&gt;&gt;tsm_RegSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_Restart.Name" xml:space="preserve">
+    <value>tsm_Restart</value>
+  </data>
+  <data name="&gt;&gt;tsm_Restart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsm_StoreSet.Name" xml:space="preserve">
+    <value>tsm_StoreSet</value>
+  </data>
+  <data name="&gt;&gt;tsm_StoreSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xktGauge1.Name" xml:space="preserve">
+    <value>xktGauge1</value>
+  </data>
+  <data name="&gt;&gt;xktGauge1.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;xktGauge1.Type" xml:space="preserve">
+    <value>xktControl.xktGauge, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xktGauge1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;xktGauge2.Name" xml:space="preserve">
+    <value>xktGauge2</value>
+  </data>
+  <data name="&gt;&gt;xktGauge2.Parent" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;xktGauge2.Type" xml:space="preserve">
+    <value>xktControl.xktGauge, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xktGauge2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.Name" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead2.Name" xml:space="preserve">
+    <value>xktPlateHead2</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead2.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead2.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead4.Name" xml:space="preserve">
+    <value>xktPlateHead4</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead4.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead4.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>AlarmInfo</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="label100.Text" xml:space="preserve">
+    <value>C-TempH</value>
+  </data>
+  <data name="label101.Text" xml:space="preserve">
+    <value>D-TempL</value>
+  </data>
+  <data name="label102.Text" xml:space="preserve">
+    <value>S-UnderVol</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>T-OverVol</value>
+  </data>
+  <data name="label107.Text" xml:space="preserve">
+    <value>C-CurH</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>D-CurH</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value>D-TempH</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>No-Protect</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>C-TempL</value>
+  </data>
+  <data name="label111.Text" xml:space="preserve">
+    <value>ShortPro</value>
+  </data>
+  <data name="label112.Text" xml:space="preserve">
+    <value>VolDiffPro</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>  Full:</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>AH</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Remain:</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>AH</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Circle:</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Timer</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Recently Protect</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Voltage</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Temp</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>System Log:</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>SOH:</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>No-Protect</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>No-Protect</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>No-Protect</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>MonoMax</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label385.Text" xml:space="preserve">
+    <value>RunTime</value>
+  </data>
+  <data name="label386.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label387.Text" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>MonoAvg</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>MonoDiff</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>SysState:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>MonoMin</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>SOC：</value>
+  </data>
+  <data name="label95.Text" xml:space="preserve">
+    <value>OverCur2</value>
+  </data>
+  <data name="label97.Text" xml:space="preserve">
+    <value>T-UnderVol</value>
+  </data>
+  <data name="label98.Text" xml:space="preserve">
+    <value>S-OverVol</value>
+  </data>
+  <data name="lbl_AverageVol.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_DiffVol.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_Info.Text" xml:space="preserve">
+    <value>System No Errors</value>
+  </data>
+  <data name="lbl_ScrollAlarm.Text" xml:space="preserve">
+    <value>System No Errors</value>
+  </data>
+  <data name="lbl_SysState.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="lbl_Temp.Text" xml:space="preserve">
+    <value>0.0 0.0 0.0</value>
+  </data>
+  <data name="lbl_TotalCurrent.Text" xml:space="preserve">
+    <value>0.000</value>
+  </data>
+  <data name="lbl_TotalVoltage.Text" xml:space="preserve">
+    <value>0.000</value>
+  </data>
+  <data name="lbl_Version.Text" xml:space="preserve">
+    <value>V0.0.0</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="pnl_Voltage.Text" xml:space="preserve">
+    <value>Single Voltage（mv）</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Lang（&amp;L）</value>
+  </data>
+  <data name="toolStripMenuItem10.Text" xml:space="preserve">
+    <value>Store（&amp;S)</value>
+  </data>
+  <data name="toolStripMenuItem13.Text" xml:space="preserve">
+    <value>Helper（&amp;H）</value>
+  </data>
+  <data name="toolStripMenuItem4.Text" xml:space="preserve">
+    <value>System（&amp;S）</value>
+  </data>
+  <data name="toolStripMenuItem5.Text" xml:space="preserve">
+    <value>Select（&amp;T)</value>
+  </data>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>     HardVer：</value>
+  </data>
+  <data name="toolStripStatusLabel10.Text" xml:space="preserve">
+    <value>V1.0.0</value>
+  </data>
+  <data name="toolStripStatusLabel11.Text" xml:space="preserve">
+    <value>     SoftVer：</value>
+  </data>
+  <data name="toolStripStatusLabel2.Text" xml:space="preserve">
+    <value>     State：</value>
+  </data>
+  <data name="toolStripStatusLabel8.Text" xml:space="preserve">
+    <value>     DateTime：</value>
+  </data>
+  <data name="tsb_CalibrationParam.Text" xml:space="preserve">
+    <value>Calibration</value>
+  </data>
+  <data name="tsb_Exit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="tsb_HardwareConfig.Text" xml:space="preserve">
+    <value>Hardware</value>
+  </data>
+  <data name="tsb_HardwareUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="tsb_ProtectParam.Text" xml:space="preserve">
+    <value>Protect</value>
+  </data>
+  <data name="tsb_Restart.Text" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="tsb_SystemLog.Text" xml:space="preserve">
+    <value>SysLog</value>
+  </data>
+  <data name="tsl_CommState.Text" xml:space="preserve">
+    <value>DisConn</value>
+  </data>
+  <data name="tsl_time.Text" xml:space="preserve">
+    <value>2019-08-10 00:00:00 Saturday</value>
+  </data>
+  <data name="tsm_About.Text" xml:space="preserve">
+    <value>About（&amp;A）</value>
+  </data>
+  <data name="tsm_Chinese.Text" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+  <data name="tsm_CommSet.Text" xml:space="preserve">
+    <value>CommSet（&amp;W）</value>
+  </data>
+  <data name="tsm_English.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="tsm_Exit.Text" xml:space="preserve">
+    <value>Exit（&amp;E）</value>
+  </data>
+  <data name="tsm_Help.Text" xml:space="preserve">
+    <value>Helper（&amp;V）</value>
+  </data>
+  <data name="tsm_RecordStart.Text" xml:space="preserve">
+    <value>Start（&amp;W）</value>
+  </data>
+  <data name="tsm_RecordStop.Text" xml:space="preserve">
+    <value>Stop（&amp;S）</value>
+  </data>
+  <data name="tsm_RegSet.Text" xml:space="preserve">
+    <value>Licence（&amp;S）</value>
+  </data>
+  <data name="tsm_Restart.Text" xml:space="preserve">
+    <value>Restart（&amp;R）</value>
+  </data>
+  <data name="tsm_StoreSet.Text" xml:space="preserve">
+    <value>StoreSet（&amp;W）</value>
+  </data>
+  <data name="xktPlateHead1.Text" xml:space="preserve">
+    <value>Protect Info</value>
+  </data>
+  <data name="xktPlateHead2.Text" xml:space="preserve">
+    <value>Basic Info</value>
+  </data>
+  <data name="xktPlateHead4.Text" xml:space="preserve">
+    <value>Other Info</value>
+  </data>
+</root>

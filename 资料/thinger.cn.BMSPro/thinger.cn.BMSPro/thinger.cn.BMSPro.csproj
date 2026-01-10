@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9F2659A-2584-4F9D-9C4E-15C83B2F9334}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>thinger.cn.BMSPro</RootNamespace>
+    <AssemblyName>thinger.cn.BMSPro</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>monitor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="SeeSharpTools.JY.GUI">
+      <HintPath>bin\Debug\3rdParty\SeeSharpTools.JY.GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xktComm, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\xktComm.dll</HintPath>
+    </Reference>
+    <Reference Include="xktControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\xktControl.dll</HintPath>
+    </Reference>
+    <Reference Include="xktNodeSettings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\xktNodeSettings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonMethods.cs" />
+    <Compile Include="FrmStoreSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStoreSet.Designer.cs">
+      <DependentUpon>FrmStoreSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParamSet.Designer.cs">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSysLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSysLog.Designer.cs">
+      <DependentUpon>FrmSysLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdate.Designer.cs">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHardware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHardware.Designer.cs">
+      <DependentUpon>FrmHardware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCommSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCommSet.Designer.cs">
+      <DependentUpon>FrmCommSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalibration.Designer.cs">
+      <DependentUpon>FrmCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProtect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProtect.Designer.cs">
+      <DependentUpon>FrmProtect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="NiceFileFunction.cs" />
+    <Compile Include="PrintDGV.cs" />
+    <Compile Include="PrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintOptions.designer.cs">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCalibration.en-US.resx">
+      <DependentUpon>FrmCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalibration.zh-CN.resx">
+      <DependentUpon>FrmCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCommSet.en-US.resx">
+      <DependentUpon>FrmCommSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCommSet.zh-CN.resx">
+      <DependentUpon>FrmCommSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardware.en-US.resx">
+      <DependentUpon>FrmHardware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardware.zh-CN.resx">
+      <DependentUpon>FrmHardware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.en-US.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.zh-CN.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParamSet.en-US.resx">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParamSet.zh-CN.resx">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProtect.en-US.resx">
+      <DependentUpon>FrmProtect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProtect.zh-CN.resx">
+      <DependentUpon>FrmProtect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStoreSet.en-US.resx">
+      <DependentUpon>FrmStoreSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStoreSet.resx">
+      <DependentUpon>FrmStoreSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParamSet.resx">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStoreSet.zh-CN.resx">
+      <DependentUpon>FrmStoreSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSysLog.en-US.resx">
+      <DependentUpon>FrmSysLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSysLog.resx">
+      <DependentUpon>FrmSysLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSysLog.zh-CN.resx">
+      <DependentUpon>FrmSysLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdate.en-US.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdate.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardware.resx">
+      <DependentUpon>FrmHardware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCommSet.resx">
+      <DependentUpon>FrmCommSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalibration.resx">
+      <DependentUpon>FrmCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProtect.resx">
+      <DependentUpon>FrmProtect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdate.zh-CN.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintOptions.resx">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\alert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\americanflag.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\chinaflag.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\contact.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\contact2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\contact2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\flash.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\flash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\note.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\reload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\stats.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\trend.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\trend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\hardware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\校准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\重启.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\updateconfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\load.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\loop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\battery1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\battery2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\thinger.cn.BMSControl\thinger.cn.BMSControl.csproj">
+      <Project>{60A21600-5F5D-4318-93CA-94FDDDB7D3D5}</Project>
+      <Name>thinger.cn.BMSControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\thinger.cn.BMSDAL\thinger.cn.BMSDAL.csproj">
+      <Project>{A00F5715-6AA1-435B-B78D-26257F17BFEC}</Project>
+      <Name>thinger.cn.BMSDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\thinger.cn.BMSHelper\thinger.cn.BMSHelper.csproj">
+      <Project>{0F7A9019-92B0-4286-8742-F9CFDE8BFD2C}</Project>
+      <Name>thinger.cn.BMSHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\thinger.cn.BMSModels\thinger.cn.BMSModels.csproj">
+      <Project>{145C2234-3DCF-47DD-AE99-0E6D62EC2899}</Project>
+      <Name>thinger.cn.BMSModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAFxgAAAEAIAAoCQAAFgAAACgAAAAXAAAAMAAAAAEAIAAAAAAAoAgAAGEPAABhDwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgMFtAIDBbQCAwW0AebtqAG6xZA3U/5YAXqFcAGCk
+        XQBfo10AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgMFtAIDB
+        bQCAwW0AgMFtAIDBbSmBwm2IbrFkw12hXIteolwrWp5aAF6iXQBeolwAZqlgAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDBbQCAwW0AgMFtAIDBbQmAwW1tgMFt34DBbf9usWT/XaFc/12h
+        XOFdoVxwXqJdCl6iXABdoVwAYaVeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAwW0AgMFtAIDB
+        bQCAwW0SgMFtmIDBbfuAwW3/gMFt/26xZP9doVz/XaFc/12hXPxdoVycXqJcFF6iXABdoVwAaKthAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDBbQCAwW0AgMFtEIDBbaKAwW3/gMFt/4DBbf+AwW3/brFk/12h
+        XP9doVz/XaFc/12hXP9doVymXqJdEV6iXABeolwAAAAAAAAAAAAAAAAAAAAAAAAAAACAwW0AgMFtAIDB
+        bQWAwW2MgMFt/4DBbf9/wWz/fsBr/3/Ba/9tsGP/W6Ba/1ugWv9coVv/XaFc/12hXP9doVyQX6NdBl6i
+        XQBfo10AAAAAAAAAAAAAAAAABgkFAIDBbQCAwW0AgMFtWoDBbfaAwW3/f8Fs/4nFeP+22an/s9im/323
+        dP+TupL/mL2X/2imZ/9coVv/XaFc/12hXPddoVxeXKBcAGirYQBtsGQAAAAAAAAAAACAwW0AgMFtAIDB
+        bR6AwW3SgMFt/4DBbf9+wGv/udqs//34+P/69vX/0t7N/97e3P/j4OH/nL+a/1ugWv9doVz/XaFc/12h
+        XNVeolwhXqJcAF+jXQAAAAAAAAAAAIDBbQCAwW0AgMFtgIDBbf+AwW3/f8Fs/4TDcv/Y6M///vj5//33
+        +P/v6+z/4d/f/+Pg4f+9zrz/Y6Ri/1yhW/9doVz/XaFc/12hXIRWm1kAYKRdAAAAAACAwW0AgMFtAIDB
+        bSCAwW3agMFt/4DBbf+BwW7/udqs//n28//89/f//Pf3/+7r6//h39//4d/f/97e3P+cv5r/X6Je/12h
+        XP9doVz/XaFc3V6iXCJeolwAYKReAIDBbQCAwW0AgMFtaYDBbf+AwW3/fsBr/5rMiv/z8+3//ff4//z3
+        9//89/f/7uvr/+Hf3//h39//4t/g/9jb1v96r3n/W6Ba/12hXP9doVz/XaFcbV2hXABUmVgAgMFtAIDB
+        bQiAwW21gMFt/4DBbf9+wGv/qNKa//v29v/89/f//Pf3//z39//u6+v/4d/f/+Hf3//h39//4N/e/4m2
+        iP9boFr/XaFc/12hXP9doVy5X6JdCV6iXQCAwW0AgMFtKIDBbeaAwW3/gMFt/37Aa/+o0pr/+/b1//z3
+        9//89/f//Pf3/+7r6//h39//4d/f/+Hf3//g3t7/ibaH/1ugWv9doVz/XaFc/12hXOleolwrXqJcAIDB
+        bQCAwW1VgMFt/IDBbf+AwW3/fsBr/6jSmv/79vX//Pf3//z39//89/f/7uvr/+Hf3//h39//4d/f/+De
+        3v+Jtof/W6Ba/12hXP9doVz/XaFc/V2hXFldoVwAgMFtAIDBbYKAwW3/gMFt/4DBbf9+wGv/pNGV//r2
+        9f/99/j//ff4//74+f/w7O3/4t/g/+Lf4P/i3+D/4N7e/4W0hP9boFr/XaFc/12hXP9doVz/XaFchlyg
+        WwCAwW0CgMFtpYDBbf+AwW3/gMFt/3/BbP+Lxnn/1ebM//Pz7f/u8ej/5O3d/9HdzP/H08b/09jR/9jb
+        1v+5zLj/aqdp/1yhW/9doVz/XaFc/12hXP9doVypYKReA4DBbQqAwW29gMFt/4DBbf+AwW3/gMFt/3/B
+        bP+HxHX/lcqE/5HIgP+JxXb/dLNq/2WlZf9vqm7/dKxz/2WlZP9coVv/XaFc/12hXP9doVz/XaFc/12h
+        XMBeol0MgMFtEoDBbcuAwW3/gMFt/4DBbf+AwW3/gMFt/4DBbP9/wGz/f8Fs/4DBbf9usWT/XKBb/1yg
+        W/9coFv/XKFb/12hXP9doVz/XaFc/12hXP9doVz/XaFczl6iXRSAwW0WgMFt1IDBbf+AwW3/gMFt/4DB
+        bf+AwW3/gMFt/4DBbf+AwW3/gMFt/26xZP9doVz/XaFc/12hXP9doVz/XaFc/12hXP9doVz/XaFc/12h
+        XP9doVzXX6JdGYDBbRCAwW2agMFtv4DBbcWAwW3VgMFt6IDBbfqAwW3/gMFt/4DBbf+AwW3/brFk/12h
+        XP9doVz/XaFc/12hXP9doVz6XaFc6V2hXNZdoVzGXaFcwF6hXJ5fo10TgMFtAYDBbQaAwW0IgMFtDIDB
+        bRWAwW0pgMFtT4DBbYuAwW3TgMFt/oDBbf9usWT/XaFc/12hXP5doVzUXaFcjV6hXFBeolwrXqJcFl6i
+        XQ1eol0JX6NdB2GkXgGAwW0AgMFtAIDBbQCAwW0AgMFtAIDBbQCAwW0AgMFtAIDBbRmAwW14gcFt7m6x
+        ZP9doVzwXaFce16iXBpanloAXaFcAF6iXABeol0AXqJdAF6iXQBfo10AYaReAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAgMFtAIDBbQCAwW0AgMFtAIDBbQCBwm1wbrFk01ygXHNQlVUAXqJcAGGkXgBfo10Aa65jAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAwW0AgMFtAILC
+        bgZusWQVXKBcB16hXABeol0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+AP4A+AA+APAA
+        HgDgAA4A4AAOAMAABgCAAAIAgAACAIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA+AA+AP8B/gA=
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>校准参数</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmCalibration</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_ModifyCurrent.Name" xml:space="preserve">
+    <value>btn_ModifyCurrent</value>
+  </data>
+  <data name="&gt;&gt;btn_ModifyCurrent.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;btn_ModifyCurrent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_ModifyCurrent.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label271.Name" xml:space="preserve">
+    <value>label271</value>
+  </data>
+  <data name="&gt;&gt;label271.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label271.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label271.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label272.Name" xml:space="preserve">
+    <value>label272</value>
+  </data>
+  <data name="&gt;&gt;label272.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label272.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label272.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label273.Name" xml:space="preserve">
+    <value>label273</value>
+  </data>
+  <data name="&gt;&gt;label273.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label273.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label273.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label274.Name" xml:space="preserve">
+    <value>label274</value>
+  </data>
+  <data name="&gt;&gt;label274.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label274.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label274.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label275.Name" xml:space="preserve">
+    <value>label275</value>
+  </data>
+  <data name="&gt;&gt;label275.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label275.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label275.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label277.Name" xml:space="preserve">
+    <value>label277</value>
+  </data>
+  <data name="&gt;&gt;label277.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label277.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label277.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;label281.Name" xml:space="preserve">
+    <value>label281</value>
+  </data>
+  <data name="&gt;&gt;label281.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label281.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label281.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;label31.Name" xml:space="preserve">
+    <value>label31</value>
+  </data>
+  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label315.Name" xml:space="preserve">
+    <value>label315</value>
+  </data>
+  <data name="&gt;&gt;label315.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label315.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label315.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label32.Name" xml:space="preserve">
+    <value>label32</value>
+  </data>
+  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label323.Name" xml:space="preserve">
+    <value>label323</value>
+  </data>
+  <data name="&gt;&gt;label323.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label323.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label323.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label33.Name" xml:space="preserve">
+    <value>label33</value>
+  </data>
+  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label36.Name" xml:space="preserve">
+    <value>label36</value>
+  </data>
+  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label366.Name" xml:space="preserve">
+    <value>label366</value>
+  </data>
+  <data name="&gt;&gt;label366.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label366.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label366.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label367.Name" xml:space="preserve">
+    <value>label367</value>
+  </data>
+  <data name="&gt;&gt;label367.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label367.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label367.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label368.Name" xml:space="preserve">
+    <value>label368</value>
+  </data>
+  <data name="&gt;&gt;label368.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label368.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label368.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label369.Name" xml:space="preserve">
+    <value>label369</value>
+  </data>
+  <data name="&gt;&gt;label369.Parent" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;label369.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label369.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label37.Name" xml:space="preserve">
+    <value>label37</value>
+  </data>
+  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label370.Name" xml:space="preserve">
+    <value>label370</value>
+  </data>
+  <data name="&gt;&gt;label370.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label370.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label370.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label371.Name" xml:space="preserve">
+    <value>label371</value>
+  </data>
+  <data name="&gt;&gt;label371.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label371.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label371.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label372.Name" xml:space="preserve">
+    <value>label372</value>
+  </data>
+  <data name="&gt;&gt;label372.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label372.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label372.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label373.Name" xml:space="preserve">
+    <value>label373</value>
+  </data>
+  <data name="&gt;&gt;label373.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label373.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label373.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label374.Name" xml:space="preserve">
+    <value>label374</value>
+  </data>
+  <data name="&gt;&gt;label374.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label374.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label374.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label375.Name" xml:space="preserve">
+    <value>label375</value>
+  </data>
+  <data name="&gt;&gt;label375.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label375.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label375.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label376.Name" xml:space="preserve">
+    <value>label376</value>
+  </data>
+  <data name="&gt;&gt;label376.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label376.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label376.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label377.Name" xml:space="preserve">
+    <value>label377</value>
+  </data>
+  <data name="&gt;&gt;label377.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label377.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label377.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label378.Name" xml:space="preserve">
+    <value>label378</value>
+  </data>
+  <data name="&gt;&gt;label378.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label378.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label378.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label379.Name" xml:space="preserve">
+    <value>label379</value>
+  </data>
+  <data name="&gt;&gt;label379.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label379.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label379.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label380.Name" xml:space="preserve">
+    <value>label380</value>
+  </data>
+  <data name="&gt;&gt;label380.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label380.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label380.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label381.Name" xml:space="preserve">
+    <value>label381</value>
+  </data>
+  <data name="&gt;&gt;label381.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label381.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label381.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label382.Name" xml:space="preserve">
+    <value>label382</value>
+  </data>
+  <data name="&gt;&gt;label382.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label382.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label382.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label384.Name" xml:space="preserve">
+    <value>label384</value>
+  </data>
+  <data name="&gt;&gt;label384.Parent" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;label384.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label384.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label41.Name" xml:space="preserve">
+    <value>label41</value>
+  </data>
+  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label42.Name" xml:space="preserve">
+    <value>label42</value>
+  </data>
+  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label43.Name" xml:space="preserve">
+    <value>label43</value>
+  </data>
+  <data name="&gt;&gt;label43.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label446.Name" xml:space="preserve">
+    <value>label446</value>
+  </data>
+  <data name="&gt;&gt;label446.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label446.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label446.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label46.Name" xml:space="preserve">
+    <value>label46</value>
+  </data>
+  <data name="&gt;&gt;label46.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label46.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label47.Name" xml:space="preserve">
+    <value>label47</value>
+  </data>
+  <data name="&gt;&gt;label47.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label47.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label48.Name" xml:space="preserve">
+    <value>label48</value>
+  </data>
+  <data name="&gt;&gt;label48.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label48.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label51.Name" xml:space="preserve">
+    <value>label51</value>
+  </data>
+  <data name="&gt;&gt;label51.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label52.Name" xml:space="preserve">
+    <value>label52</value>
+  </data>
+  <data name="&gt;&gt;label52.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label53.Name" xml:space="preserve">
+    <value>label53</value>
+  </data>
+  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label56.Name" xml:space="preserve">
+    <value>label56</value>
+  </data>
+  <data name="&gt;&gt;label56.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label57.Name" xml:space="preserve">
+    <value>label57</value>
+  </data>
+  <data name="&gt;&gt;label57.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label58.Name" xml:space="preserve">
+    <value>label58</value>
+  </data>
+  <data name="&gt;&gt;label58.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Panel_CurrentCalibration.Name" xml:space="preserve">
+    <value>Panel_CurrentCalibration</value>
+  </data>
+  <data name="&gt;&gt;Panel_CurrentCalibration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel_CurrentCalibration.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Panel_CurrentCalibration.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Panel_EnergyCalibration.Name" xml:space="preserve">
+    <value>Panel_EnergyCalibration</value>
+  </data>
+  <data name="&gt;&gt;Panel_EnergyCalibration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel_EnergyCalibration.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Panel_EnergyCalibration.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Panel_SOCCalibration.Name" xml:space="preserve">
+    <value>Panel_SOCCalibration</value>
+  </data>
+  <data name="&gt;&gt;Panel_SOCCalibration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel_SOCCalibration.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Panel_SOCCalibration.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>Panel_SOCCalibration</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_CurrentModify.Name" xml:space="preserve">
+    <value>txt_CurrentModify</value>
+  </data>
+  <data name="&gt;&gt;txt_CurrentModify.Parent" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;txt_CurrentModify.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_CurrentModify.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.Name" xml:space="preserve">
+    <value>xktPlateHead1</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.Type" xml:space="preserve">
+    <value>xktControl.xktPlateHead, xktControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xktPlateHead1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_ModifyCurrent.Text" xml:space="preserve">
+    <value>校准</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>SOC百分比</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>10 %</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>20 %</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>校准值</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>30 %</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>40 %</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label271.Text" xml:space="preserve">
+    <value>充电效能比：</value>
+  </data>
+  <data name="label272.Text" xml:space="preserve">
+    <value>放电效能比：</value>
+  </data>
+  <data name="label273.Text" xml:space="preserve">
+    <value>mA</value>
+  </data>
+  <data name="label274.Text" xml:space="preserve">
+    <value>满充调整率：</value>
+  </data>
+  <data name="label275.Text" xml:space="preserve">
+    <value>BMS工作电流：</value>
+  </data>
+  <data name="label277.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label281.Text" xml:space="preserve">
+    <value>倍率(*0.1)</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>50 %</value>
+  </data>
+  <data name="label315.Text" xml:space="preserve">
+    <value>电压基准MV</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label323.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>60 %</value>
+  </data>
+  <data name="label366.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label367.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label368.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label369.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label370.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label371.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label372.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label373.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label374.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label375.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label376.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label377.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label378.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label379.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label380.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label381.Text" xml:space="preserve">
+    <value>SOC低压基准：</value>
+  </data>
+  <data name="label382.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label384.Text" xml:space="preserve">
+    <value>校准使能位：</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>70 %</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label446.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>80 %</value>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label48.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>90 %</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>100 %</value>
+  </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>0 %</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>mv</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>★ 当前实时电流：</value>
+  </data>
+  <data name="Panel_CurrentCalibration.Text" xml:space="preserve">
+    <value>电流校准</value>
+  </data>
+  <data name="Panel_EnergyCalibration.Text" xml:space="preserve">
+    <value>能耗校准</value>
+  </data>
+  <data name="Panel_SOCCalibration.Text" xml:space="preserve">
+    <value>初始化SOC校准</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>零电流校准</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>实时电流校准</value>
+  </data>
+  <data name="txt_CurrentModify.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="xktPlateHead1.Text" xml:space="preserve">
+    <value>电流校准</value>
+  </data>
+</root>
