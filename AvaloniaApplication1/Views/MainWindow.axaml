@@ -74,7 +74,9 @@
             <RowDefinition Height="45"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBox Text="操作日志" FontSize="24" IsReadOnly="True"/>
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+            <TextBlock Text="操作日志" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
         <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" CornerRadius="4" Margin="0,5,0,15" Height="261" VerticalAlignment="Top">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
                 <i:Interaction.Behaviors>
@@ -109,7 +111,9 @@
             <RowDefinition Height="45"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <TextBox Text="电池组实时信息" FontSize="24" IsReadOnly="True"/>
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+            <TextBlock Text="电池组实时信息" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
         <UniformGrid Grid.Row="1" Columns="1">
             <TextBlock>
                 <Run Text="电压: "/>
@@ -149,7 +153,10 @@
             </TextBlock>
 
         </UniformGrid>
-        <TextBox Grid.Row="2" Text="电池组状态" FontSize="24" IsReadOnly="True"/>
+        
+        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+            <TextBlock Text="电池组状态" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
         <UniformGrid Grid.Row="3" Columns="1">
             <TextBlock>
                 <Run Text="循环次数: "/>
@@ -182,7 +189,9 @@
                <RowDefinition Height="45"/>
                <RowDefinition />
            </Grid.RowDefinitions>
-           <TextBox Text="14s单体电压" Height="45" FontSize="24" Margin="0,0,0,10" IsReadOnly="True"/>
+           <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+               <TextBlock Text="14s单体电压" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+           </Border>
 
         <UniformGrid Columns="2" Grid.Row="1">
             <TextBlock>
@@ -269,12 +278,15 @@
             <RowDefinition Height="45"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBox Text="电池组操作" FontSize="24" HorizontalAlignment="Center" IsReadOnly="True"/>
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+            <TextBlock Text="电池组操作" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        
         <UniformGrid Grid.Row="1" Columns="3">
             <Button Content="  连 接 电 池" Width="110" IsEnabled="{Binding !IsSerialEnabled}" Command="{Binding SwitchSerialPortCommand}"/>
             <Button Content="  断 开 电 池" Width="110" IsEnabled="{Binding IsSerialEnabled}" Command="{Binding SwitchSerialPortCommand}"/>
             <Button Content="  写 入 日 期" Command="{Binding WriteDateCommand}" />
-            <Button Content="获取故障信息" Width="110" IsEnabled="{Binding IsSerialEnabled}" Command="{Binding GetFaultInfoCommand}"/>
+            <Button Content="获取故障信息" Width="110" Command="{Binding GetFaultInfoCommand}"/>
 			<TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
 			<TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
 
@@ -310,7 +322,9 @@
             <RowDefinition Height="45"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBox Text="历史故障信息" FontSize="24" IsReadOnly="True"/>
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+            <TextBlock Text="历史故障信息" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
         <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" Margin="10" 
                   BorderThickness="1" BorderBrush="Gray" Height="630" Width="400">
             <DataGrid.Columns>

@@ -653,6 +653,7 @@ public partial class MainWindowViewModel : ViewModelBase
             OverReleaseCount = part2[37];
             OvercurrentsCount = part2[38];
             OverchargesCount = part2[39];
+            AddLog($"读取到循环次数为{LoopCount}，过温次数{OverTemperatureCount}，过放次数{OverReleaseCount}，过流次数{OvercurrentsCount}，过充次数{OverchargesCount}");
             FlightControlProtocolFlag = part2[40];
             switch (FlightControlProtocolFlag)
             {
