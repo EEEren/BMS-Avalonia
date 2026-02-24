@@ -203,24 +203,24 @@ namespace AvaloniaApplication1.Models
 
         }
 
-        public Task<ushort[]> ReadHoldRegisterAsync(byte slaveId, ushort startAddr, ushort length,
+        public async Task<ushort[]> ReadHoldRegisterAsync(byte slaveId, ushort startAddr, ushort length,
             CancellationToken ct = default)
         {
             var job = new ModbusAdHocReadJob(slaveId, startAddr, length, priority: 1,ct);
             _queue.Enqueue(job);
             _wakeup.Set();
-            return job.Tcs.Task.ContinueWith(t =>
+            var result = await job.Tcs.Task;
+            if (result is ushort[] data)
             {
-                if (t.IsCanceled)
-                {
-                    throw new TaskCanceledException();
-                }
-                if (t.IsFaulted)
-                {
-                    throw t.Exception!.InnerException!;
-                }
-                return (ushort[])t.Result!;
-            }, TaskScheduler.Default);
+                return data;
+            }
+            else if (result is Exception ex)
+            {
+                // 如果后台逻辑改不了，至少在这里手动处理
+                throw ex;
+            }
+
+            throw new InvalidOperationException($"Unexpected result type: {result?.GetType().Name}");
         }
 
 
@@ -289,8 +289,16 @@ namespace AvaloniaApplication1.Models
                         }
                         break;
                     case ModbusAdHocReadJob r:
-                        var data = _client.ReadRegisters(r.SlaveId, r.StartAddress, r.Length);
-                        r.Tcs.TrySetResult(data);
+                        try
+                        {
+                            var data = _client.ReadRegisters(r.SlaveId, r.StartAddress, r.Length);
+                            r.Tcs.TrySetResult(data);
+                        }
+                        catch (Exception ex)
+                        {
+                            job.Tcs.TrySetException(ex); 
+                        }
+                        
                         break;
                     default:
                         job.Tcs.TrySetResult(null);
@@ -318,6 +326,7 @@ namespace AvaloniaApplication1.Models
                 try
                 {
                     var data = _client.ReadRegisters(p.SlaveId, p.StartAddress, p.Length);
+                    
                     OnPollingData(p, data);
                 }
                 catch (Exception ex)
