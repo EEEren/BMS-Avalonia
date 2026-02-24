@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="using:Avalonia.Xaml.Interactivity"
         xmlns:localBehaviors="using:AvaloniaApplication1.Behaviors"
-        mc:Ignorable="d" Width="1340" Height="720"
+        mc:Ignorable="d" Width="1400" Height="720"
+        CanResize="False"
         x:Class="AvaloniaApplication1.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -17,6 +18,15 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
     
+     <Window.Styles>
+        <!--<Style Selector="DataGrid#MyDataGrid">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>-->
+        <Style Selector="DataGrid#MyDataGrid DataGridCell">
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </Window.Styles>
+
     <Grid>
     <Grid.RowDefinitions>
         <RowDefinition Height="240"/>
@@ -317,7 +327,7 @@
     </Grid>
 		
 	<!-- 历史故障信息 -->
-    <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Width="400" VerticalAlignment="Top" Grid.RowSpan="3" Margin="10">
+    <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Width="450" VerticalAlignment="Top" Grid.RowSpan="3" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition />
@@ -325,10 +335,10 @@
         <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
             <TextBlock Text="历史故障信息" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
-        <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" Margin="10" 
-                  BorderThickness="1" BorderBrush="Gray" Height="630" Width="400">
+        <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" Margin="10" x:Name="MyDataGrid"
+                  BorderThickness="1" BorderBrush="Gray" Height="630" Width="450" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="时间"  Binding="{Binding DateTime}" Width="100"/>
+                <DataGridTextColumn Header="时间"  Binding="{Binding DateTime}" Width="150"/>
                 <DataGridTextColumn Header="故障类型" Binding="{Binding FaultType}"/>
                 <DataGridTextColumn Header="电流" Binding="{Binding CurrentState}" />
                 <DataGridTextColumn Header="电压"  Binding="{Binding VoltageState}"/>
