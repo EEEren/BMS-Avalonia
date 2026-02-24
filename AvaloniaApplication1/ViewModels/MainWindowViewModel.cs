@@ -349,7 +349,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel()
     {
         //定时器初始化
-        //_Timer = new Timer(GetStatus, null, Timeout.Infinite, Timeout.Infinite);
+        _Timer = new Timer(GetStatus, null, Timeout.Infinite, Timeout.Infinite);
 
         AddLog("系统启动");
         //获取连接电脑的串口
@@ -428,7 +428,7 @@ public partial class MainWindowViewModel : ViewModelBase
     /// <summary>
     /// 获取从站信息
     /// </summary>
-    private async void GetStatus()
+    private async void GetStatus(object? obj)
     {
         if(port == null || !port.IsOpen || !IsSerialEnabled || modbus == null)
         {
@@ -450,6 +450,10 @@ public partial class MainWindowViewModel : ViewModelBase
              */
 
             var part1 = scheduler.FirstData;
+            if (part1.Count == 0)
+            {
+                return;
+            }
             string data = string.Join(Environment.NewLine,
                 part1.Select((v, i) => $"[{i}] = {v}"));
 
@@ -630,6 +634,11 @@ public partial class MainWindowViewModel : ViewModelBase
             */
 
             var part2 = scheduler.LastData;
+
+            if (part2.Count == 0)
+            {
+                return;
+            }
             //  软件版本号由0~7组成
             // AddLog($"读取寄存器软件版本号{part2.Take(8).ToArray()}");
             // SoftwareVersion = DECToHEX(part2.Take(8).ToArray());
@@ -688,7 +697,7 @@ public partial class MainWindowViewModel : ViewModelBase
     }
 
 
-    private async void GetVersionInfo()
+    private async Task GetVersionInfo()
     {
         if(port == null || !port.IsOpen || !IsSerialEnabled || modbus == null)
         {
@@ -712,31 +721,38 @@ public partial class MainWindowViewModel : ViewModelBase
             */
 
 
-            var part2 = scheduler.LastData;
+            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 4191, 41);
+            var part2 = await readTask;
 
-            //  软件版本号由0~7组成
-            AddLog($"读取寄存器硬件版本号{string.Join(",", part2.Take(8).ToArray())}");
-            SoftwareVersion = NummberToLetter(part2.Take(8).ToArray());
-            AddLog($"转换后的硬件件版本号{SoftwareVersion}");
-            DormantState = part2[8];
-            // 休眠倒计时  预留
-            // DormantState = part2[9];
-            //  硬件版本号由10~17组成
-            AddLog($"读取寄存器软件版本号{string.Join(",", part2.Skip(10).Take(8).ToArray())}");
-            HardwareVersion = NummberToLetter(part2.Skip(10).Take(8).ToArray());
-            AddLog($"转换后的软件版本号{HardwareVersion}");
+            if (part2 is ushort[])
+            {
+                //  软件版本号由0~7组成
+                // AddLog($"读取寄存器硬件版本号{string.Join(",", part2.Take(8).ToArray())}");
+                SoftwareVersion = NummberToLetter(part2.Take(8).ToArray());
+                // AddLog($"转换后的硬件件版本号{SoftwareVersion}");
+                DormantState = part2[8];
+                // 休眠倒计时  预留
+                // DormantState = part2[9];
+                //  硬件版本号由10~17组成
+                // AddLog($"读取寄存器软件版本号{string.Join(",", part2.Skip(10).Take(8).ToArray())}");
+                HardwareVersion = NummberToLetter(part2.Skip(10).Take(8).ToArray());
+                // AddLog($"转换后的软件版本号{HardwareVersion}");
             
-            //  电池序列号由18~29组成
-            AddLog($"读取寄存器电池ID{string.Join(",", part2.Skip(18).Take(12).ToArray())}");
-            BatteryIDSerialNumber = NummberToLetter(part2.Skip(18).Take(12).ToArray());
-            AddLog($"转换后的电池ID{HardwareVersion}");
+                //  电池序列号由18~29组成
+                // AddLog($"读取寄存器电池ID{string.Join(",", part2.Skip(18).Take(12).ToArray())}");
+                BatteryIDSerialNumber = NummberToLetter(part2.Skip(18).Take(12).ToArray());
+                // AddLog($"转换后的电池ID{HardwareVersion}");
+            }
+            else
+            {
+                
+            }
 
             
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            throw;
+            AddWarnLog($"获取版本信息失败", e);
         }
 
         
@@ -776,18 +792,18 @@ public partial class MainWindowViewModel : ViewModelBase
         //连接串口
         var res = Connect();
 
-        /* 使用调度器进行读取，不再使用定时器
+        //使用调度器进行读取，不再使用定时器
         //定时器启动，获取从站状态
         if (res)
         {
             AddLog("开启定时任务"); 
             _Timer.Change(DelayInterval, DelayInterval);
         }
-        */
+        
 
         scheduler = new ModbusScheduler(modbus, pollPoint,
             pollInterval: TimeSpan.FromSeconds(2),
-            interRequestGap: TimeSpan.FromMilliseconds(2));
+            interRequestGap: TimeSpan.FromMilliseconds(222));
     
     }
 
@@ -801,8 +817,8 @@ public partial class MainWindowViewModel : ViewModelBase
             if (res)
             {
                 BtnSwitchSerialPortText = "打开串口";
-                //AddLog("取消定时任务");
-                //_Timer?.Change(Timeout.Infinite, Timeout.Infinite);
+                AddLog("取消定时任务");
+                _Timer?.Change(Timeout.Infinite, Timeout.Infinite);
                 
             }
 
@@ -818,9 +834,10 @@ public partial class MainWindowViewModel : ViewModelBase
                 BtnSwitchSerialPortText = "关闭串口";
                 //AddLog("开启定时任务");
                 //AddLog($"定时器间隔{DelayInterval}");
-                ////GetVersionInfo();
-                //_Timer.Change(DelayInterval, DelayInterval);
                 scheduler = new ModbusScheduler(modbus, pollPoint, pollInterval: TimeSpan.FromSeconds(2), interRequestGap: TimeSpan.FromMilliseconds(2));
+                Thread.Sleep(50);
+                GetVersionInfo();
+                _Timer.Change(DelayInterval, DelayInterval);
             }
         }
     }
@@ -857,11 +874,12 @@ public partial class MainWindowViewModel : ViewModelBase
                     (ushort)day.Day,
                     (ushort)week,
                     (ushort)TimeSpan.Hours,
-                    (ushort)TimeSpan.Minutes
+                    (ushort)TimeSpan.Minutes,
+                    (ushort)TimeSpan.Seconds
                 };
 
                 //将年，月，周，日，时间，分钟写入寄存器
-                var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  4232, date);
+                var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  8292, date);
                 var res = await writeTask;
                 if (res == true)
                 {
@@ -1002,8 +1020,6 @@ public partial class MainWindowViewModel : ViewModelBase
         {
             return;
         }
-
-
         
         try
         {
@@ -1011,18 +1027,17 @@ public partial class MainWindowViewModel : ViewModelBase
             var res = await master.ReadHoldingRegistersAsync((byte)SlaveAddr, 0xc000, 10);
             */
 
-            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152, 10);
+            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152, 8);
             var res = await readTask;
 
             FaultInfo item = new FaultInfo();
-            string year = res[2].ToString();
-            string month = (res[3] >> 8).ToString();
-            string week = (res[3] & 0xFF).ToString();
-            string day = (res[4] >> 8).ToString();
-            string hour = (res[4] & 0xFF).ToString();
-            string minutes = (res[5] >> 8).ToString();
-            string second = (res[5] & 0xFF).ToString();
-            item.DateTime = $"{year}年{month}月{week}周{day}日:{hour}时{minutes}分{second}秒";
+            string year = res[2].ToString("D4");
+            string month = res[3].ToString("D2");
+            string day = res[4].ToString("D2");
+            string hour = res[5].ToString();
+            string minutes = res[6].ToString();// (res[5] >> 8).ToString();
+            string second = res[7].ToString();// (res[5] & 0xFF).ToString();
+            item.DateTime = $"{year}.{month}.{day}/{hour}:{minutes}:{second}";
             ushort state = res[0];
             switch (state)
             {
@@ -1069,39 +1084,39 @@ public partial class MainWindowViewModel : ViewModelBase
                     item.VoltageState = "正常";
                     item.TemperatureState = $"{res[1]}℃";
                     break;
-                case 11:
+                case 17:
                     item.FaultType = "放电过压异常";
                     item.CurrentState = "正常";
                     item.VoltageState = $"{res[1]}mV";
                     item.TemperatureState = "正常";
                     break;
-                case 12:
+                case 18:
                     item.FaultType = "放电过压恢复";
                     item.CurrentState = "正常";
                     item.TemperatureState = "正常";
                     item.VoltageState = $"{res[1]}mV";
                     break;
-                case 13:
+                case 19:
                     item.FaultType = "放电过流异常";
                     item.CurrentState = $"{res[1]}mA";
                     item.VoltageState = "正常";
                     item.TemperatureState = "正常";
 
                     break;
-                case 14:
+                case 20:
                     item.FaultType = "放电过流恢复";
                     item.TemperatureState = "正常";
                     item.VoltageState = "正常";
                     item.CurrentState = $"{res[1]}mA";
 
                     break;
-                case 15:
+                case 21:
                     item.FaultType = $"放电高温异常";
                     item.CurrentState = "正常";
                     item.VoltageState = "正常";
                     item.TemperatureState = $"{res[1]}℃";
                     break;
-                case 16:
+                case 22:
                     item.FaultType = "放电高温恢复";
                     item.CurrentState = "正常";
                     item.VoltageState = "正常";
@@ -1109,8 +1124,8 @@ public partial class MainWindowViewModel : ViewModelBase
                     break;
 
             }
-            
-            allFaultInfos.Add(item);
+
+            FilterFaultInfos.Add(item);
         }
         catch (TimeoutException)
         {
