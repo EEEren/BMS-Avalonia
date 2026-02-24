@@ -1013,6 +1013,9 @@ public partial class MainWindowViewModel : ViewModelBase
         
     }
 
+    /// <summary>
+    /// 获取历史故障信息
+    /// </summary>
     [RelayCommand]
     public async Task GetFaultInfo()
     {
@@ -1027,104 +1030,63 @@ public partial class MainWindowViewModel : ViewModelBase
             var res = await master.ReadHoldingRegistersAsync((byte)SlaveAddr, 0xc000, 10);
             */
 
-            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152, 8);
+            //从0xc000开始，读16个寄存器 
+            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152, 16);  
             var res = await readTask;
 
             FaultInfo item = new FaultInfo();
-            string year = res[2].ToString("D4");
-            string month = res[3].ToString("D2");
-            string day = res[4].ToString("D2");
-            string hour = res[5].ToString();
-            string minutes = res[6].ToString();// (res[5] >> 8).ToString();
-            string second = res[7].ToString();// (res[5] & 0xFF).ToString();
+            string year = res[1].ToString("D4");    //0XC001 中故障时间 年
+            string month = res[2].ToString("D2");   //0XC002 中故障时间 月
+            string day = res[3].ToString("D2");     //0XC003 中故障时间 日
+            string hour = res[4].ToString();              //0XC004 中故障时间 时
+            string minutes = res[5].ToString();           //0XC005 中故障时间 分
+            string second = res[6].ToString();            //0XC006 中故障时间 秒
             item.DateTime = $"{year}.{month}.{day}/{hour}:{minutes}:{second}";
+            //0XC000 中获取故障类型
             ushort state = res[0];
             switch (state)
             {
                 case 0:
-                    item.TemperatureState = "正常";
-                    item.CurrentState = "正常";
-                    item.VoltageState = "正常";
-                    item.FaultType = "正常";
+                    item.FaultType = "单体过压";
                     break;
                 case 1:
-                    item.TemperatureState = "正常";
-                    item.CurrentState = "正常";
-                    item.VoltageState = $"{res[1]}mV";
-                    item.FaultType = "充电过压异常";
+                    item.FaultType = "单体欠压";
                     break;
                 case 2:
-                    item.TemperatureState = "正常";
-                    item.CurrentState = "正常";
-                    item.VoltageState = $"{res[1]}mV";
-                    item.FaultType = "充电过压恢复";
+                    item.FaultType = "总压过高";
                     break;
                 case 3:
-                    item.TemperatureState = "正常";
-                    item.FaultType = "充电过流异常";
-                    item.VoltageState = "正常";
-                    item.CurrentState = $"{res[1]}mA";
+                    item.FaultType = "总压过低";
                     break;
                 case 4:
-                    item.TemperatureState = "正常";
-                    item.FaultType = "充电过流恢复";
-                    item.VoltageState = "正常";
-                    item.CurrentState = $"{res[1]}mA";
-
+                    item.FaultType = "充电过流";
                     break;
                 case 5:
-                    item.FaultType = "充电高温异常";
-                    item.CurrentState = "正常";
-                    item.VoltageState = "正常";
-                    item.TemperatureState = $"{res[1]}℃";
+                    item.FaultType = "放电过流";
                     break;
                 case 6:
-                    item.FaultType = "充电高温恢复";
-                    item.CurrentState = "正常";
-                    item.VoltageState = "正常";
-                    item.TemperatureState = $"{res[1]}℃";
+                    item.FaultType = "充电单体温度过高";
                     break;
-                case 17:
-                    item.FaultType = "放电过压异常";
-                    item.CurrentState = "正常";
-                    item.VoltageState = $"{res[1]}mV";
-                    item.TemperatureState = "正常";
+                case 7:
+                    item.FaultType = "充电单体温度过低";
                     break;
-                case 18:
-                    item.FaultType = "放电过压恢复";
-                    item.CurrentState = "正常";
-                    item.TemperatureState = "正常";
-                    item.VoltageState = $"{res[1]}mV";
+                case 8:
+                    item.FaultType = "放电单体温度过高";
                     break;
-                case 19:
-                    item.FaultType = "放电过流异常";
-                    item.CurrentState = $"{res[1]}mA";
-                    item.VoltageState = "正常";
-                    item.TemperatureState = "正常";
-
+                case 9:
+                    item.FaultType = "放电单体温度过低";
                     break;
-                case 20:
-                    item.FaultType = "放电过流恢复";
-                    item.TemperatureState = "正常";
-                    item.VoltageState = "正常";
-                    item.CurrentState = $"{res[1]}mA";
-
-                    break;
-                case 21:
-                    item.FaultType = $"放电高温异常";
-                    item.CurrentState = "正常";
-                    item.VoltageState = "正常";
-                    item.TemperatureState = $"{res[1]}℃";
-                    break;
-                case 22:
-                    item.FaultType = "放电高温恢复";
-                    item.CurrentState = "正常";
-                    item.VoltageState = "正常";
-                    item.TemperatureState = $"{res[1]}℃";
-                    break;
+                
 
             }
 
+            item.SystemTotalVoltage = res[7];   //系统总电压
+            item.SystemCurrent = res[8];    //系统电流
+            item.SOC = res[9];  //显示SOC
+            item.MaxCellVoltage = res[10];  //最高单体电压
+            item.MinCellVoltage = res[11];  //最低单体电压
+            item.MaxTemperature = res[12];  //最高温度
+            item.MinTemperature = res[13];  //最低温度
             FilterFaultInfos.Add(item);
         }
         catch (TimeoutException)

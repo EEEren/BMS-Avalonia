@@ -335,14 +335,25 @@
         <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
             <TextBlock Text="历史故障信息" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
-        <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" Margin="10" x:Name="MyDataGrid"
-                  BorderThickness="1" BorderBrush="Gray" Height="630" Width="450" >
+        <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" 
+                  Margin="10" x:Name="MyDataGrid"
+                  BorderThickness="1" BorderBrush="Gray" Height="630" Width="450" 
+                  ColumnWidth="SizeToHeader">
+            <DataGrid.Styles>
+                <Style Selector="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Styles>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="时间"  Binding="{Binding DateTime}" Width="150"/>
                 <DataGridTextColumn Header="故障类型" Binding="{Binding FaultType}"/>
-                <DataGridTextColumn Header="电流" Binding="{Binding CurrentState}" />
-                <DataGridTextColumn Header="电压"  Binding="{Binding VoltageState}"/>
-                <DataGridTextColumn Header="温度" Binding="{Binding TemperatureState}" />
+                <DataGridTextColumn Header="系统总电压"  Binding="{Binding SystemTotalVoltage}"/>
+                <DataGridTextColumn Header="系统电流" Binding="{Binding SystemCurrent}" />
+                <DataGridTextColumn Header="显示SOC" Binding="{Binding SOC}" />
+                <DataGridTextColumn Header="最高单体电压" Binding="{Binding MaxCellVoltage}" />
+                <DataGridTextColumn Header="最低单体电压" Binding="{Binding MinCellVoltage}" />
+                <DataGridTextColumn Header="最高温度" Binding="{Binding MaxTemperature}" />
+                <DataGridTextColumn Header="最低温度" Binding="{Binding MinTemperature}" />
             </DataGrid.Columns>
             
         </DataGrid>
