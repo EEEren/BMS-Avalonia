@@ -871,8 +871,8 @@ public partial class MainWindowViewModel : ViewModelBase
                 {
                     (ushort)day.Year,
                     (ushort)day.Month,
-                    (ushort)day.Day,
                     (ushort)week,
+                    (ushort)day.Day,
                     (ushort)TimeSpan.Hours,
                     (ushort)TimeSpan.Minutes,
                     (ushort)TimeSpan.Seconds
