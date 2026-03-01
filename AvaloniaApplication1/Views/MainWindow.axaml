@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="using:Avalonia.Xaml.Interactivity"
         xmlns:localBehaviors="using:AvaloniaApplication1.Behaviors"
-        mc:Ignorable="d" Width="1400" Height="720"
-        CanResize="False"
+        mc:Ignorable="d" Width="1570" Height="720"
+        CanResize="True"
         x:Class="AvaloniaApplication1.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -327,7 +327,7 @@
     </Grid>
 		
 	<!-- 历史故障信息 -->
-    <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Width="450" VerticalAlignment="Top" Grid.RowSpan="3" Margin="10">
+    <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.RowSpan="3" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition />
@@ -337,17 +337,22 @@
         </Border>
         <DataGrid Grid.Row="1" ItemsSource="{Binding FilterFaultInfos}" 
                   Margin="10" x:Name="MyDataGrid"
-                  BorderThickness="1" BorderBrush="Gray" Height="630" Width="450" 
-                  ColumnWidth="SizeToHeader">
+                  BorderThickness="1" BorderBrush="Gray" Height="630" 
+                  ColumnWidth="SizeToHeader"
+                  CanUserResizeColumns="True">
             <DataGrid.Styles>
                 <Style Selector="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="Padding" Value="0"/>
+                </Style>
+                <Style Selector="DataGridColumnHeader /template/ ContentPresenter">
+                    <Setter Property="Margin" Value="0,0,-30,0"/> 
                 </Style>
             </DataGrid.Styles>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="时间"  Binding="{Binding DateTime}" Width="150"/>
-                <DataGridTextColumn Header="故障类型" Binding="{Binding FaultType}"/>
-                <DataGridTextColumn Header="系统总电压"  Binding="{Binding SystemTotalVoltage}"/>
+                <DataGridTextColumn Header="故障类型" Binding="{Binding FaultType}" />
+                <DataGridTextColumn Header="系统总电压"  Binding="{Binding SystemTotalVoltage}" />
                 <DataGridTextColumn Header="系统电流" Binding="{Binding SystemCurrent}" />
                 <DataGridTextColumn Header="显示SOC" Binding="{Binding SOC}" />
                 <DataGridTextColumn Header="最高单体电压" Binding="{Binding MaxCellVoltage}" />
