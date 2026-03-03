@@ -298,6 +298,18 @@ public partial class MainWindowViewModel : ViewModelBase
     [ObservableProperty] 
     private string _batteryCapacity;    //设置电池电量
 
+    [ObservableProperty] 
+    private string _lowCurrentCharging; //校验充电小电流
+    
+    [ObservableProperty] 
+    private string _highCurrentCharging; //校验充电小电流
+    
+    [ObservableProperty] 
+    private string _lowCurrentDischarging; //校验放电小电流
+    
+    [ObservableProperty] 
+    private string _highCurrentDischarging; //校验放电小电流
+
     public DateTime SeletedDate
     {
         get => _seletedDate;
@@ -536,7 +548,7 @@ public partial class MainWindowViewModel : ViewModelBase
             // CellVoltageStatus = part1[65];
             // CellVoltageStatus = part1[66];
 
-            BatteryCurrent = (part1[67] - 16000) * 0.1; // 电池电流
+            BatteryCurrent = (part1[67] - 16000) * 0.1 * (-1); // 电池电流 电池电流显示为负数
             AccumulatedTotalVoltage = part1[68] * 0.1; // 累加总电压值
             TotalBusVoltage = part1[69] * 0.1; // 母线总电压值
             TemperaturesCollectedCount = part1[70]; // 采集温度数量
@@ -888,7 +900,7 @@ public partial class MainWindowViewModel : ViewModelBase
                 }
                 else
                 {
-                    AddLog($"向寄存器0x1088写入{date}失败, 写入时间{SeletedDate}-{TimeSpan}失败");
+                    AddLog($"向寄存器0x2064写入{date}失败, 写入时间{SeletedDate}-{TimeSpan}失败");
 
                 }
 
@@ -988,18 +1000,42 @@ public partial class MainWindowViewModel : ViewModelBase
 
         try
         {
-            if (!string.IsNullOrEmpty(FlightControlProtocolType)) //判断飞控协议是否填值
+            if (!string.IsNullOrEmpty(BatteryCapacity)) //判断飞控协议是否填值
             {
                 /* 使用调度器进行读取，不再使用定时器
                 await master.WriteSingleRegisterAsync((byte)SlaveAddr, 0x1087,
                     (ushort)int.Parse(BatteryCapacity));
                 */
+                
+                if (!ushort.TryParse(BatteryCapacity, out ushort value))
+                {
+                    AddLog($"设置电量为：{BatteryCapacity}，填入数据非法");
+                    return;
+                }
+
+                ushort[] data = new[]
+                {
+                    value
+                };
+                
+                // var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  8292, data);
+                // var res = await writeTask;
+                // if (res == true)
+                // {
+                //     AddLog($"写入电池电量成功");
+                //
+                // }
+                // else
+                // {
+                //     AddLog($"向寄存器0x1088写入{BatteryCapacity}失败, 写入时间{SeletedDate}-{TimeSpan}失败");
+                //
+                // }
             }
             else
             {
                 await MessageBoxManager.GetMessageBoxStandard("提示", "未填写电池容量", ButtonEnum.Ok).ShowAsync();
 
-                AddLog($"未填写飞控协议类型");
+                AddLog($"未填写电池容量");
             }
         }
         catch (TimeoutException)
@@ -1163,6 +1199,222 @@ public partial class MainWindowViewModel : ViewModelBase
 
         string date = SeletedDate.ToString("yyyyMMdd");
         FilterFaultInfos = AllFaultInfos.Where(f => f.DateTime.Contains(date)) as ObservableCollection<FaultInfo>;
+    }
+    
+    
+
+    /// <summary>
+    /// 读取故障历史
+    /// </summary>
+    /// <param name="num">读取的历史故障信息条数</param>
+    /// <returns></returns>
+    private List<FaultInfo> GetFaultHistorys(int num)
+    {
+        return null;
+    }
+    
+    /// <summary>
+    /// 充电小电流校验
+    /// </summary>
+    [RelayCommand]
+    public async Task CalibrateLowCurrentCharging()
+    {
+        if (port == null || !port.IsOpen)
+        {
+            await MessageBoxManager.GetMessageBoxStandard("提示", "串口未连接", ButtonEnum.Ok).ShowAsync();
+            return;
+        }
+
+        try
+        {
+            if (!ushort.TryParse(LowCurrentCharging, out ushort value))
+            {
+                await MessageBoxManager.GetMessageBoxStandard("提示", $"充电小电流为：{LowCurrentCharging}，填入数据非法", ButtonEnum.Ok).ShowAsync();
+                AddLog($"充电小电流为：{LowCurrentCharging}，填入数据非法");
+                return;
+            }
+
+            ushort[] data = new[]
+            {
+                value
+            };
+            
+            var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  8288, data);
+            var res = await writeTask;
+            if (res == true)
+            {
+                AddLog($"写入充电小电流成功");
+            
+            }
+            else
+            {
+                AddLog($"向寄存器0x2060写入{LowCurrentCharging}失败");
+            
+            }
+            
+        }
+        catch (TimeoutException)
+        {
+            AddLog($"写入充电小电流{LowCurrentCharging}超时");
+        }
+        catch (Exception e)
+        {
+            AddWarnLog($"写入充电小电流{LowCurrentCharging}失败,{e.Message}", e);
+        }
+        
+    }
+    
+    /// <summary>
+    /// 充电大电流校验
+    /// </summary>
+    [RelayCommand]
+    public async Task CalibrateHighCurrentCharging()
+    {
+        if (port == null || !port.IsOpen)
+        {
+            await MessageBoxManager.GetMessageBoxStandard("提示", "串口未连接", ButtonEnum.Ok).ShowAsync();
+            return;
+        }
+
+        try
+        {
+            if (!ushort.TryParse(HighCurrentCharging, out ushort value))
+            {
+                await MessageBoxManager.GetMessageBoxStandard("提示", $"充电大电流为：{HighCurrentCharging}，填入数据非法", ButtonEnum.Ok).ShowAsync();
+                AddLog($"充电大电流为：{HighCurrentCharging}，填入数据非法");
+                return;
+            }
+
+            ushort[] data = new[]
+            {
+                value
+            };
+            
+            var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  8289, data);
+            var res = await writeTask;
+            if (res == true)
+            {
+                AddLog($"写入充电大电流成功");
+            
+            }
+            else
+            {
+                AddLog($"向寄存器0x2061写入{HighCurrentCharging}失败");
+            
+            }
+            
+        }
+        catch (TimeoutException)
+        {
+            AddLog($"写入充电大电流{HighCurrentCharging}超时");
+        }
+        catch (Exception e)
+        {
+            AddWarnLog($"写入充电大电流{HighCurrentCharging}失败,{e.Message}", e);
+        }
+        
+    }
+    
+    /// <summary>
+    /// 校验放电小电量
+    /// </summary>
+    [RelayCommand]
+    public async Task CalibrateLowCurrentDischarging()
+    {
+        if (port == null || !port.IsOpen)
+        {
+            await MessageBoxManager.GetMessageBoxStandard("提示", "串口未连接", ButtonEnum.Ok).ShowAsync();
+            return;
+        }
+
+        try
+        {
+            if (!ushort.TryParse(LowCurrentDischarging, out ushort value))
+            {
+                await MessageBoxManager.GetMessageBoxStandard("提示", $"放电小电流为：{LowCurrentDischarging}，填入数据非法", ButtonEnum.Ok).ShowAsync();
+                AddLog($"充电小电流为：{LowCurrentDischarging}，填入数据非法");
+                return;
+            }
+
+            ushort[] data = new[]
+            {
+                value
+            };
+            
+            var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  8290, data);
+            var res = await writeTask;
+            if (res == true)
+            {
+                AddLog($"写入放电小电流成功");
+            
+            }
+            else
+            {
+                AddLog($"向寄存器0x2062写入{LowCurrentDischarging}失败");
+            
+            }
+            
+        }
+        catch (TimeoutException)
+        {
+            AddLog($"写入放电小电流{LowCurrentDischarging}超时");
+        }
+        catch (Exception e)
+        {
+            AddWarnLog($"写入放电小电流{LowCurrentDischarging}失败,{e.Message}", e);
+        }
+        
+    }
+    
+    /// <summary>
+    /// 放电大电流校验
+    /// </summary>
+    [RelayCommand]
+    public async Task CalibrateHighCurrentDischarging()
+    {
+        if (port == null || !port.IsOpen)
+        {
+            await MessageBoxManager.GetMessageBoxStandard("提示", "串口未连接", ButtonEnum.Ok).ShowAsync();
+            return;
+        }
+
+        try
+        {
+            if (!ushort.TryParse(HighCurrentDischarging, out ushort value))
+            {
+                await MessageBoxManager.GetMessageBoxStandard("提示", $"放电大电流为：{HighCurrentDischarging}，填入数据非法", ButtonEnum.Ok).ShowAsync();
+                AddLog($"放电大电流为：{HighCurrentDischarging}，填入数据非法");
+                return;
+            }
+
+            ushort[] data = new[]
+            {
+                value
+            };
+            
+            var writeTask = scheduler.WriteRegisterAsync((byte)SlaveAddr,  8291, data);
+            var res = await writeTask;
+            if (res == true)
+            {
+                AddLog($"写入充电大电流成功");
+            
+            }
+            else
+            {
+                AddLog($"向寄存器0x2063写入{HighCurrentDischarging}失败");
+            
+            }
+            
+        }
+        catch (TimeoutException)
+        {
+            AddLog($"写入放电大电流{HighCurrentDischarging}超时");
+        }
+        catch (Exception e)
+        {
+            AddWarnLog($"写入放电大电流{HighCurrentDischarging}失败,{e.Message}", e);
+        }
+        
     }
 
 

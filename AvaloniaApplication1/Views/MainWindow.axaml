@@ -41,7 +41,7 @@
     </Grid.ColumnDefinitions>
 
     <!-- 串口参数 -->
-    <Grid Margin="10">
+    <Grid Margin="10,-100,10,10" Height="200">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -114,7 +114,7 @@
     </Grid>
 
     <!-- 电池组实时信息 -->
-    <Grid Grid.Row="1" Grid.Column="0" Width="200" Margin="10" Grid.RowSpan="2">
+    <Grid Grid.Row="1" Grid.Column="0" Width="200" Margin="10,-100,10,10" Grid.RowSpan="2">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition Height= "8*"/>
@@ -193,7 +193,7 @@
     </Grid>
 
     <!-- 14s单体电压 -->
-    <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,10,10" Width="360" Grid.RowSpan="2">
+    <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,63,10,10" Width="360" Grid.RowSpan="2">
        <Grid>
            <Grid.RowDefinitions>
                <RowDefinition Height="45"/>
@@ -283,7 +283,7 @@
     
 
     <!-- 电池组操作 -->
-    <Grid Grid.Row="0" Grid.Column="1" Margin="10" Width="360" HorizontalAlignment="Left" >
+    <Grid Grid.Row="0" Grid.Column="1" Margin="10,70,10,10" Width="360" HorizontalAlignment="Left" Height="360">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition />
@@ -302,13 +302,29 @@
 
 			<!--<Button Content="  删 除 记 录" Width="110" IsEnabled="{Binding IsSerialEnabled}"/>-->
             <!--<Button Content="      校  对" Width="110" IsEnabled="{Binding IsSerialEnabled}"/>-->
-            <Button Content=" 修改飞控协议" Width="110"  Command="{Binding ModifyFightControlCommand}"/>
-            <TextBox Width="110" Height="27" Margin="-9,0,0,0" Text="{Binding FlightControlProtocolType}"/> 
+            <Button Content=" 修改飞控协议" Width="118"  Command="{Binding ModifyFightControlCommand}"/>
+            <TextBox Width="110" Height="27"  Text="{Binding FlightControlProtocolType}"/> 
             <TextBlock Text="0:新微克;1:博鹰" TextWrapping="Wrap" Margin="5,12,0,0"/>
 
-			<Button Content=" 设  置  电  量" Width="110"  Command="{Binding SetBatteryCapacityCommand}"/>
-			<TextBox Width="110" Height="27" Margin="-9,0,0,0" Text="{Binding BatteryCapacity}"/>
+			<Button Content=" 设  置  电  量" Width="118"  Command="{Binding SetBatteryCapacityCommand}"/>
+			<TextBox Width="110" Height="27" Text="{Binding BatteryCapacity}"/>
 			<TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+            
+            <Button Content="充电小电流校准" Width="118"  Command="{Binding CalibrateLowCurrentChargingCommand}"/>
+            <TextBox Width="110" Height="27"  Text="{Binding LowCurrentCharging}"/>
+            <TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+            
+            <Button Content="充电大电流校准" Width="118"  Command="{Binding CalibrateHighCurrentCharging}"/>
+            <TextBox Width="110" Height="27" Text="{Binding HighCurrentCharging}"/>
+            <TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+            
+            <Button Content="放电小电流校准" Width="118"  Command="{Binding CalibrateLowCurrentDischargingCommand}"/>
+            <TextBox Width="110" Height="27" Text="{Binding LowCurrentDischarging}"/>
+            <TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
+            
+            <Button Content="放电大电流校准" Width="118"  Command="{Binding CalibrateHighCurrentDischargingCommand}"/>
+            <TextBox Width="110" Height="27" Text="{Binding HighCurrentDischarging}"/>
+            <TextBlock Text="" TextWrapping="Wrap" Margin="5,2,0,0"/>
         </UniformGrid>
     </Grid>
     
