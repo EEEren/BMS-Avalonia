@@ -1057,6 +1057,8 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         if(port == null || !port.IsOpen || !IsSerialEnabled || modbus == null)
         {
+            await MessageBoxManager.GetMessageBoxStandard("提示", "串口未连接", ButtonEnum.Ok).ShowAsync();
+
             return;
         }
         
@@ -1066,119 +1068,28 @@ public partial class MainWindowViewModel : ViewModelBase
             var res = await master.ReadHoldingRegistersAsync((byte)SlaveAddr, 0xc000, 10);
             */
 
+            ushort[] data = Array.Empty<ushort>();
             //从0xc000开始，读32个寄存器 
-            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152, 32);  
+            var readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152, 80);  
             var res = await readTask;
-
-            FaultInfo item = new FaultInfo();
-            string year = res[1].ToString("D4");    //0XC001 中故障时间 年
-            string month = res[2].ToString("D2");   //0XC002 中故障时间 月
-            string day = res[3].ToString("D2");     //0XC003 中故障时间 日
-            string hour = res[4].ToString();              //0XC004 中故障时间 时
-            string minutes = res[5].ToString();           //0XC005 中故障时间 分
-            string second = res[6].ToString();            //0XC006 中故障时间 秒
-            item.DateTime = $"{year}.{month}.{day}/{hour}:{minutes}:{second}";
-            //0XC000 中获取故障类型
-            ushort state = res[0];
-            switch (state)
-            {
-                case 0:
-                    item.FaultType = "单体过压";
-                    break;
-                case 1:
-                    item.FaultType = "单体欠压";
-                    break;
-                case 2:
-                    item.FaultType = "总压过高";
-                    break;
-                case 3:
-                    item.FaultType = "总压过低";
-                    break;
-                case 4:
-                    item.FaultType = "充电过流";
-                    break;
-                case 5:
-                    item.FaultType = "放电过流";
-                    break;
-                case 6:
-                    item.FaultType = "充电单体温度过高";
-                    break;
-                case 7:
-                    item.FaultType = "充电单体温度过低";
-                    break;
-                case 8:
-                    item.FaultType = "放电单体温度过高";
-                    break;
-                case 9:
-                    item.FaultType = "放电单体温度过低";
-                    break;
-                
-
-            }
-
-            item.SystemTotalVoltage = res[7];   //系统总电压
-            item.SystemCurrent = res[8];    //系统电流
-            item.SOC = res[9];  //显示SOC
-            item.MaxCellVoltage = res[10];  //最高单体电压
-            item.MinCellVoltage = res[11];  //最低单体电压
-            item.MaxTemperature = res[12];  //最高温度
-            item.MinTemperature = res[13];  //最低温度
-            FilterFaultInfos.Add(item);
+            List<ushort> tmp = new List<ushort>();
+            tmp.AddRange(res);
+            readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152 + 80, 80);  
+            res = await readTask;
+            tmp.AddRange(res);
+            readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152 + 160, 80);  
+            res = await readTask;
+            tmp.AddRange(res);
+            readTask = scheduler.ReadHoldRegisterAsync((byte)SlaveAddr, 49152 + 240, 80);  
+            res = await readTask;
+            tmp.AddRange(res);
             
-            item = new FaultInfo();
-            year = res[1 + 16].ToString("D4");    //0XC001 中故障时间 年
-            month = res[2 + 16].ToString("D2");   //0XC002 中故障时间 月
-            day = res[3 + 16].ToString("D2");     //0XC003 中故障时间 日
-            hour = res[4 + 16].ToString();              //0XC004 中故障时间 时
-            minutes = res[5 + 16].ToString();           //0XC005 中故障时间 分
-            second = res[6 + 16].ToString();            //0XC006 中故障时间 秒
-            item.DateTime = $"{year}.{month}.{day}/{hour}:{minutes}:{second}";
-            //0XC000 中获取故障类型
-            state = res[0 + 16];
-            switch (state)
+            var list = ParseFalutInfo(tmp.ToArray());
+            foreach (var item in list)
             {
-                case 0:
-                    item.FaultType = "单体过压";
-                    break;
-                case 1:
-                    item.FaultType = "单体欠压";
-                    break;
-                case 2:
-                    item.FaultType = "总压过高";
-                    break;
-                case 3:
-                    item.FaultType = "总压过低";
-                    break;
-                case 4:
-                    item.FaultType = "充电过流";
-                    break;
-                case 5:
-                    item.FaultType = "放电过流";
-                    break;
-                case 6:
-                    item.FaultType = "充电单体温度过高";
-                    break;
-                case 7:
-                    item.FaultType = "充电单体温度过低";
-                    break;
-                case 8:
-                    item.FaultType = "放电单体温度过高";
-                    break;
-                case 9:
-                    item.FaultType = "放电单体温度过低";
-                    break;
-                
-
+                FilterFaultInfos.Add(item);
             }
-
-            item.SystemTotalVoltage = res[7 + 16];   //系统总电压
-            item.SystemCurrent = res[8 + 16];    //系统电流
-            item.SOC = res[9 + 16];  //显示SOC
-            item.MaxCellVoltage = res[10 + 16];  //最高单体电压
-            item.MinCellVoltage = res[11 + 16];  //最低单体电压
-            item.MaxTemperature = res[12 + 16];  //最高温度
-            item.MinTemperature = res[13 + 16];  //最低温度
-            FilterFaultInfos.Add(item);
+            
         }
         catch (TimeoutException)
         {
@@ -1204,12 +1115,81 @@ public partial class MainWindowViewModel : ViewModelBase
     
 
     /// <summary>
-    /// 读取故障历史
+    /// 解析故障历史
     /// </summary>
-    /// <param name="num">读取的历史故障信息条数</param>
+    /// <param name="data">寄存器中的数据</param>
     /// <returns></returns>
-    private List<FaultInfo> GetFaultHistorys(int num)
+    private List<FaultInfo> ParseFalutInfo(ushort[] data)
     {
+        int quotient = data.Length / 16;
+        int remainder = data.Length % 16;
+        if (remainder != 0)
+        {
+            AddLog($"发送数据的长度为{data.Length},不是16的倍数");
+            return null;
+        }
+
+        List<FaultInfo> list = new List<FaultInfo>();
+        for (int i = 0; i < quotient; i++)
+        {
+            FaultInfo item = new FaultInfo();
+            string year = data[1 + 16 * i].ToString("D4");    //0XC001 中故障时间 年
+            string month = data[2 + 16 * i].ToString("D2");   //0XC002 中故障时间 月
+            string day = data[3 + 16 * i].ToString("D2");     //0XC003 中故障时间 日
+            string hour = data[4 + 16 * i].ToString();              //0XC004 中故障时间 时
+            string minutes = data[5 + 16 * i].ToString();           //0XC005 中故障时间 分
+            string second = data[6 + 16 * i].ToString();            //0XC006 中故障时间 秒
+            item.DateTime = $"{year}.{month}.{day}/{hour}:{minutes}:{second}";
+            //0XC000 中获取故障类型
+            ushort state = data[0 + 16 * i];
+            switch (state)
+            {
+                case 0:
+                    item.FaultType = "单体过压";
+                    break;
+                case 1:
+                    item.FaultType = "单体欠压";
+                    break;
+                case 2:
+                    item.FaultType = "总压过高";
+                    break;
+                case 3:
+                    item.FaultType = "总压过低";
+                    break;
+                case 4:
+                    item.FaultType = "充电过流";
+                    break;
+                case 5:
+                    item.FaultType = "放电过流";
+                    break;
+                case 6:
+                    item.FaultType = "充电单体温度过高";
+                    break;
+                case 7:
+                    item.FaultType = "充电单体温度过低";
+                    break;
+                case 8:
+                    item.FaultType = "放电单体温度过高";
+                    break;
+                case 9:
+                    item.FaultType = "放电单体温度过低";
+                    break;
+                
+
+            }
+
+            item.SystemTotalVoltage = data[7 + 16 * i];   //系统总电压
+            item.SystemCurrent = data[8 + 16 * i];    //系统电流
+            item.SOC = data[9 + 16 * i];  //显示SOC
+            item.MaxCellVoltage = data[10 + 16 * i];  //最高单体电压
+            item.MinCellVoltage = data[11 + 16 * i];  //最低单体电压
+            item.MaxTemperature = data[12 + 16 * i];  //最高温度
+            item.MinTemperature = data[13 + 16 * i];  //最低温度
+            
+            list.Add(item);
+        }
+        
+        
         return null;
     }
     
